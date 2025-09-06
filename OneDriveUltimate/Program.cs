@@ -193,6 +193,7 @@ class Program
             // # uncomment the line below to test if download manager works (testing only)
             //await TestCase_CheckIfDownloadManagerWorks();
 
+            // This main line to run the full production workflow
             await Production2_0();
 
             Utils.Log($"=== Task completed successfully at {DateTime.Now} ===");
