@@ -3443,19 +3443,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\admin\\.nuget\\packages\\": {}
+    "/home/unknown/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\Desktop\\8.0\\CsharpOneDrive\\OneDriveUltimate\\OneDriveUltimate.csproj",
+      "projectUniqueName": "/home/unknown/Desktop/One Drive 8.2/OneDriveAutomation/OneDriveUltimate/OneDriveUltimate.csproj",
       "projectName": "OneDriveUltimate",
-      "projectPath": "C:\\Users\\admin\\Desktop\\8.0\\CsharpOneDrive\\OneDriveUltimate\\OneDriveUltimate.csproj",
-      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\Desktop\\8.0\\CsharpOneDrive\\OneDriveUltimate\\obj\\",
+      "projectPath": "/home/unknown/Desktop/One Drive 8.2/OneDriveAutomation/OneDriveUltimate/OneDriveUltimate.csproj",
+      "packagesPath": "/home/unknown/.nuget/packages/",
+      "outputPath": "/home/unknown/Desktop/One Drive 8.2/OneDriveAutomation/OneDriveUltimate/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/unknown/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -3473,11 +3473,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3505,7 +3500,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.413/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.119/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

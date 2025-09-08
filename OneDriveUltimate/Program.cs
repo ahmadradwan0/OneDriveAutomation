@@ -153,27 +153,7 @@ class Program
     /// 3.  **Version Comparison:** Compares the web-scraped list against the local list to identify only the new versions that need to be downloaded.
     /// 4.  **Download Execution:** Attempts to download the new versions and tracks which ones are successfully downloaded.
     /// </remarks>
-    public async static Task TestCase_CheckIfDownloadManagerWorks()
-    {
-        Utils.Log("TestCase :::: Starting Test Case to check if Download Manager works...");
 
-        // Second Step is to get all the version we have saved in the local json file and load them in a list
-        var JsonList = Initializer.LocalStorageScrapping();
-        Utils.Log("Number Of versions in Local Json File :::    " + JsonList.Count.ToString());
-
-        //3rd Step is To get all the versions from the website TABLE and load them in a list
-        var websiteList = await Initializer.InitWebScrapping();
-        Utils.Log("Number Of versions From Website Table: " + websiteList.Count.ToString());
-
-        // 6th step is to compare the Combined List Of all discovered versions against the local Json List and get only the new versions;
-        var NewVersionsToBeDownloaded = Initializer.CompareAndGetNewVersions(websiteList, JsonList);
-        Utils.Log("Number Of New Versions To Be Downloaded: " + NewVersionsToBeDownloaded.Count.ToString());
-
-        // 7th Step is to Download the new versions found from the previous step and get a list of downloaded file paths
-        var ListOfDownloadedVersions = await Initializer.DownloadAllNewversions(NewVersionsToBeDownloaded);
-        Utils.Log("Number Of New Versions That has Been Successfully Downloaded: " + ListOfDownloadedVersions.Count.ToString());
-
-    }
 
 
 
@@ -185,7 +165,7 @@ class Program
         try
         {
             // # uncomment the line below to fill json with all versions from website table only (testing only)
-            //await TestCase_FillJsonWithWebSiteVersionsOnly();
+            await TestCase_FillJsonWithWebSiteVersionsOnly();
 
             // # uncomment the line below to fill json with all versions from website table and hidden versions included (testing only)
             //await TestCase_FillJsonWithWebSiteAndHiddenVersion();
@@ -194,7 +174,7 @@ class Program
             //await TestCase_CheckIfDownloadManagerWorks();
 
             // This main line to run the full production workflow
-            await Production2_0();
+            //await Production2_0();
 
             Utils.Log($"=== Task completed successfully at {DateTime.Now} ===");
         }

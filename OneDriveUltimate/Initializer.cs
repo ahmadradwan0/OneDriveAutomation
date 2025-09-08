@@ -2,17 +2,17 @@
 /// This class acts as a central coordinator or "wrapper" for the application's core logic.
 /// </summary>
 /// <remarks>
-/// The Initializer class serves as a middleman, orchestrating complex, multi-step workflows.
+/// The Initializer class serves as a middleman for multi step workflows and if more logic needed
 /// It calls methods from other specialized classes (like WebScraper, StorageManager, DownloadManager, and InstallationManager)
-/// in a specific sequence to perform tasks such as version discovery, downloading, and installation.
-/// This design simplifies the main application logic and improves code maintainability.
+/// This design simplifies the main application logic and improves code readability and to have more control over the output.
 /// </remarks>
 public class Initializer
 {
+
     /// <summary>
-    /// a fucntion to initiate the web scrapping process by calling (ScrapeHtmlAsync) from (WebScraper) class and return a list of VersionInfo objects
+    /// a methods calling the (ScrapeHtmlAsync) method from (WebScraper) with a year variable and will return a list of versions from website only
+    /// in future if needed to change or call another methods from webscraper it can be done here and no need to change anywhere else 
     /// </summary>
-    /// <returns>List<VersionInfo></returns>
     public async static Task<List<VersionInfo>> InitWebScrapping()
     {
         // Step 1: Scrape versions from web
@@ -21,11 +21,17 @@ public class Initializer
         return webVersions;
     }
 
+    /// <summary>
+    /// calling (SaveVersionsOverwrite) that will save and overwright data in json file from (StorageManager) class revices it as a list to be saved .
+    /// </summary>
     public static void SaveToJsonFile(List<VersionInfo> AllVersions)
     {
         StorageManager.SaveVersionsOverwrite(AllVersions);
     }
-
+    
+    /// <summary>
+    /// a method to get the versions stored in local json file (GetStoredVersions) from (StorageManager) class returns it as a list of versioninfo type 
+    /// </summary>
     public static List<VersionInfo> LocalStorageScrapping()
     {
         //StorageManager.SaveVersionsOverwrite(webVersions);
