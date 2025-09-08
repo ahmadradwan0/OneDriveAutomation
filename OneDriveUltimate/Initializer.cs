@@ -9,6 +9,10 @@
 /// </remarks>
 public class Initializer
 {
+    /// <summary>
+    /// a fucntion to initiate the web scrapping process by calling (ScrapeHtmlAsync) from (WebScraper) class and return a list of VersionInfo objects
+    /// </summary>
+    /// <returns>List<VersionInfo></returns>
     public async static Task<List<VersionInfo>> InitWebScrapping()
     {
         // Step 1: Scrape versions from web
