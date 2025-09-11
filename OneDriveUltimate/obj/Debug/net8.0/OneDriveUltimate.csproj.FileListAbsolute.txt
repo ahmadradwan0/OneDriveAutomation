@@ -89,3 +89,37 @@ C:/Users/admin/Desktop/8.0/CsharpOneDrive/OneDriveUltimate/obj/Debug/net8.0/ref/
 /home/unknown/Desktop/One Drive 8.2/OneDriveAutomation/OneDriveUltimate/obj/Debug/net8.0/OneDriveUltimate.pdb
 /home/unknown/Desktop/One Drive 8.2/OneDriveAutomation/OneDriveUltimate/obj/Debug/net8.0/OneDriveUltimate.genruntimeconfig.cache
 /home/unknown/Desktop/One Drive 8.2/OneDriveAutomation/OneDriveUltimate/obj/Debug/net8.0/ref/OneDriveUltimate.dll
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Debug\net8.0\OneDriveUltimate.exe
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Debug\net8.0\AllVersions.json
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Debug\net8.0\config.json
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Debug\net8.0\onedrive_updater.log
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Debug\net8.0\OneDriveUltimate.deps.json
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Debug\net8.0\OneDriveUltimate.runtimeconfig.json
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Debug\net8.0\OneDriveUltimate.dll
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Debug\net8.0\OneDriveUltimate.pdb
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Debug\net8.0\HtmlAgilityPack.dll
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Debug\net8.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Debug\net8.0\System.IO.Pipelines.dll
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Debug\net8.0\System.Text.Json.dll
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Debug\net8.0\System.Xml.XPath.XmlDocument.dll
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\obj\Debug\net8.0\OneDriveUltimate.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\obj\Debug\net8.0\OneDriveUltimate.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\obj\Debug\net8.0\OneDriveUltimate.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\obj\Debug\net8.0\OneDriveUltimate.AssemblyInfo.cs
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\obj\Debug\net8.0\OneDriveUltimate.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\obj\Debug\net8.0\OneDriveUltimate.sourcelink.json
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\obj\Debug\net8.0\OneDrive.BFF19541.Up2Date
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\obj\Debug\net8.0\OneDriveUltimate.dll
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\obj\Debug\net8.0\refint\OneDriveUltimate.dll
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\obj\Debug\net8.0\OneDriveUltimate.pdb
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\obj\Debug\net8.0\OneDriveUltimate.genruntimeconfig.cache
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\obj\Debug\net8.0\ref\OneDriveUltimate.dll

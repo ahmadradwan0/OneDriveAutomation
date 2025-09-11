@@ -1,0 +1,5 @@
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Release\net8.0\win-x64\publish\OneDriveUltimate.pdb
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Release\net8.0\win-x64\publish\AllVersions.json
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Release\net8.0\win-x64\publish\config.json
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Release\net8.0\win-x64\publish\onedrive_updater.log
+C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\bin\Release\net8.0\win-x64\publish\OneDriveUltimate.exe

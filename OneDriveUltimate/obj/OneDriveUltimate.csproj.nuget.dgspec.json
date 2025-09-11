@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/unknown/Desktop/One Drive 8.2/OneDriveAutomation/OneDriveUltimate/OneDriveUltimate.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\8.2Prod\\OneDriveAutomation\\OneDriveUltimate\\OneDriveUltimate.csproj": {}
   },
   "projects": {
-    "/home/unknown/Desktop/One Drive 8.2/OneDriveAutomation/OneDriveUltimate/OneDriveUltimate.csproj": {
+    "C:\\Users\\Admin\\Desktop\\8.2Prod\\OneDriveAutomation\\OneDriveUltimate\\OneDriveUltimate.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/unknown/Desktop/One Drive 8.2/OneDriveAutomation/OneDriveUltimate/OneDriveUltimate.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\8.2Prod\\OneDriveAutomation\\OneDriveUltimate\\OneDriveUltimate.csproj",
         "projectName": "OneDriveUltimate",
-        "projectPath": "/home/unknown/Desktop/One Drive 8.2/OneDriveAutomation/OneDriveUltimate/OneDriveUltimate.csproj",
-        "packagesPath": "/home/unknown/.nuget/packages/",
-        "outputPath": "/home/unknown/Desktop/One Drive 8.2/OneDriveAutomation/OneDriveUltimate/obj/",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\8.2Prod\\OneDriveAutomation\\OneDriveUltimate\\OneDriveUltimate.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\8.2Prod\\OneDriveAutomation\\OneDriveUltimate\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/unknown/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -41,6 +46,18 @@
             "HtmlAgilityPack": {
               "target": "Package",
               "version": "[1.6.13, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[9.0.9, )"
             }
           },
           "imports": [
@@ -59,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.119/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.413/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
