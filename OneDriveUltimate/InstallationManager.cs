@@ -136,7 +136,7 @@ public static class InstallationManager
         }
     }
 
-    public static async Task<List<VersionInfo>> InstallAndUninstallVersions(List<VersionInfo> downloadedVersions)
+    public static async Task<List<VersionInfo>> InstallAndUninstallVersions(List<VersionInfo> downloadedVersions, List<VersionInfo> LocalJsonList)
     {
         var installedVersions = new List<VersionInfo>();
         foreach (var DVersion in downloadedVersions)
@@ -197,6 +197,19 @@ public static class InstallationManager
              {
                  DVersion.InstallUnInstallCycleSuccess = true;
                  installedVersions.Add(DVersion);
+
+                // this is still in testing which will add every successfull version directly incase if the process inturupted ...
+                try
+                {
+                    Initializer.AddNewVersionsToJsonFile(new List<VersionInfo> { DVersion }, LocalJsonList);
+                        Utils.Log($"Cycle ::::  {DVersion.Version}  has been added to the Json File Successfully");
+                    }
+                catch (Exception ex)
+                {
+                    Utils.Log($"Cycle ::::  {DVersion.Version} Could Not be added to the file But still added to the installed list Error Message : {ex}" , "WARNING");
+                }
+
+
                  Utils.Log($"Cycle ::::  {DVersion.Version}  has been added to the installed Versions list");
              }
              else
@@ -286,7 +299,7 @@ public static class InstallationManager
             Utils.Log($"Error checking processes: {ex.Message}", "WARNING");
         }
         
-        Utils.Log("Could not verify installation", "WARNING");
+        Utils.Log("No installation Found", "WARNING");
         return false;
     }
 }

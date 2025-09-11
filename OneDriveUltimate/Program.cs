@@ -55,7 +55,7 @@ class Program
         Utils.Log("Number Of New Versions That has Been Successfully Downloaded: " + ListOfDownloadedVersions.Count.ToString());
 
         // 8tth Step is to Install the new downloaded versions and get a list of installed versions
-        var ListOfInstalledVersions = await Initializer.InstallNewDownloadedVersions(ListOfDownloadedVersions);
+        var ListOfInstalledVersions = await Initializer.InstallNewDownloadedVersions(ListOfDownloadedVersions,JsonList);
         Utils.Log("Number Of New Versions That has Been Successfully Installed: " + ListOfInstalledVersions.Count.ToString());
 
         // 9th Step is to add the successfully installed versions To oue Local Json File 
@@ -153,9 +153,59 @@ class Program
     /// 3.  **Version Comparison:** Compares the web-scraped list against the local list to identify only the new versions that need to be downloaded.
     /// 4.  **Download Execution:** Attempts to download the new versions and tracks which ones are successfully downloaded.
     /// </remarks>
+    public async static Task TestCase_CheckIfDownloadManagerWorks()
+    {
+        Utils.Log("TestCase :::: Starting Test Case to check if Download Manager works...");
+
+        // Second Step is to get all the version we have saved in the local json file and load them in a list
+        var JsonList = Initializer.LocalStorageScrapping();
+        Utils.Log("Number Of versions in Local Json File :::    " + JsonList.Count.ToString());
+
+        //3rd Step is To get all the versions from the website TABLE and load them in a list
+        var websiteList = await Initializer.InitWebScrapping();
+        Utils.Log("Number Of versions From Website Table: " + websiteList.Count.ToString());
+
+        // 6th step is to compare the Combined List Of all discovered versions against the local Json List and get only the new versions;
+        var NewVersionsToBeDownloaded = Initializer.CompareAndGetNewVersions(websiteList, JsonList);
+        Utils.Log("Number Of New Versions To Be Downloaded: " + NewVersionsToBeDownloaded.Count.ToString());
+
+        // 7th Step is to Download the new versions found from the previous step and get a list of downloaded file paths
+        var ListOfDownloadedVersions = await Initializer.DownloadAllNewversions(NewVersionsToBeDownloaded);
+        Utils.Log("Number Of New Versions That has Been Successfully Downloaded: " + ListOfDownloadedVersions.Count.ToString());
+
+    }
 
 
+    /// <summary>
+    /// Testcase to test installation manager no hiden evrsion included for faster implementation
+    /// </summary>
+    /// <param name="args"></param>
+    /// <returns></returns>
+    public async static Task TestCase_CheckIfInstallManagerWorks()
+    {
+        Utils.Log("TestCase :::: Starting Test Case to check if Download Manager works...");
 
+        // Second Step is to get all the version we have saved in the local json file and load them in a list
+        var JsonList = Initializer.LocalStorageScrapping();
+        Utils.Log("Number Of versions in Local Json File :::    " + JsonList.Count.ToString());
+
+        //3rd Step is To get all the versions from the website TABLE and load them in a list
+        var websiteList = await Initializer.InitWebScrapping();
+        Utils.Log("Number Of versions From Website Table: " + websiteList.Count.ToString());
+
+        // 6th step is to compare the Combined List Of all discovered versions against the local Json List and get only the new versions;
+        var NewVersionsToBeDownloaded = Initializer.CompareAndGetNewVersions(websiteList, JsonList);
+        Utils.Log("Number Of New Versions To Be Downloaded: " + NewVersionsToBeDownloaded.Count.ToString());
+
+        // 7th Step is to Download the new versions found from the previous step and get a list of downloaded file paths
+        var ListOfDownloadedVersions = await Initializer.DownloadAllNewversions(NewVersionsToBeDownloaded);
+        Utils.Log("Number Of New Versions That has Been Successfully Downloaded: " + ListOfDownloadedVersions.Count.ToString());
+
+        // 8tth Step is to Install the new downloaded versions and get a list of installed versions
+        var ListOfInstalledVersions = await Initializer.InstallNewDownloadedVersions(ListOfDownloadedVersions,JsonList);
+        Utils.Log("Number Of New Versions That has Been Successfully Installed: " + ListOfInstalledVersions.Count.ToString());
+
+    }
 
     public static async Task Main(string[] args)
     {
@@ -173,8 +223,11 @@ class Program
             // # uncomment the line below to test if download manager works (testing only)
             //await TestCase_CheckIfDownloadManagerWorks();
 
+            // # uncomment the line below to test if Install manager works (testing only)
+            await TestCase_CheckIfInstallManagerWorks();
+
             // This main line to run the full production workflow
-            await Production2_0();
+            //await Production2_0();
 
             Utils.Log($"=== Task completed successfully at {DateTime.Now} ===");
         }

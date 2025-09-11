@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = OneDriveUltimate
-build_property.ProjectDir = C:\Users\Admin\Desktop\8.2Prod\OneDriveAutomation\OneDriveUltimate\
+build_property.ProjectDir = /home/unknown/Desktop/One Drive 8.2/OneDriveAutomation/OneDriveUltimate/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

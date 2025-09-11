@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\8.2Prod\\OneDriveAutomation\\OneDriveUltimate\\OneDriveUltimate.csproj": {}
+    "/home/unknown/Desktop/One Drive 8.2/OneDriveAutomation/OneDriveUltimate/OneDriveUltimate.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\8.2Prod\\OneDriveAutomation\\OneDriveUltimate\\OneDriveUltimate.csproj": {
+    "/home/unknown/Desktop/One Drive 8.2/OneDriveAutomation/OneDriveUltimate/OneDriveUltimate.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\8.2Prod\\OneDriveAutomation\\OneDriveUltimate\\OneDriveUltimate.csproj",
+        "projectUniqueName": "/home/unknown/Desktop/One Drive 8.2/OneDriveAutomation/OneDriveUltimate/OneDriveUltimate.csproj",
         "projectName": "OneDriveUltimate",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\8.2Prod\\OneDriveAutomation\\OneDriveUltimate\\OneDriveUltimate.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\8.2Prod\\OneDriveAutomation\\OneDriveUltimate\\obj\\",
+        "projectPath": "/home/unknown/Desktop/One Drive 8.2/OneDriveAutomation/OneDriveUltimate/OneDriveUltimate.csproj",
+        "packagesPath": "/home/unknown/.nuget/packages/",
+        "outputPath": "/home/unknown/Desktop/One Drive 8.2/OneDriveAutomation/OneDriveUltimate/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/unknown/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -76,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.413/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.119/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

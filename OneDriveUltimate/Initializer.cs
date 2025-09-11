@@ -69,9 +69,9 @@ public class Initializer
     }
 
     //Task to install the new downloaded versions ... 
-    public async static Task<List<VersionInfo>> InstallNewDownloadedVersions(List<VersionInfo> installerPaths)
+    public async static Task<List<VersionInfo>> InstallNewDownloadedVersions(List<VersionInfo> installerPaths, List<VersionInfo> LocalJsonList)
     {
-        var ListOfInstalledVersions = await InstallationManager.InstallAndUninstallVersions(installerPaths);
+        var ListOfInstalledVersions = await InstallationManager.InstallAndUninstallVersions(installerPaths,LocalJsonList);
         return ListOfInstalledVersions;
     }
 

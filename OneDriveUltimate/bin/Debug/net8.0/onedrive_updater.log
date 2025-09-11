@@ -1713,3 +1713,12 @@
 [2025-09-07 16:49:29] [INFO] Stored versions updated (overwrite).
 [2025-09-07 16:49:29] [INFO] Number of versions in Local Json File after update :::    157
 [2025-09-07 16:49:29] [INFO] === Task completed successfully at 9/7/2025 4:49:29 PM ===
+[2025-09-11 02:24:45] [INFO] === Task started at 9/11/2025 2:24:45 AM ===
+[2025-09-11 02:24:47] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-11 02:24:47] [INFO] Number Of versions in Local Json File :::    157
+[2025-09-11 02:24:47] [INFO] Fetching versions from website table...
+[2025-09-11 02:24:48] [INFO] All versions fetched since The year :    25
+[2025-09-11 02:24:48] [INFO] Number Of versions From Website Table: 160
+[2025-09-11 02:24:48] [INFO] Stored versions updated (overwrite).
+[2025-09-11 02:24:48] [INFO] Number of versions in Local Json File after update :::    160
+[2025-09-11 02:24:48] [INFO] === Task completed successfully at 9/11/2025 2:24:48 AM ===
