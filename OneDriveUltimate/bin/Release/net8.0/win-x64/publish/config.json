@@ -1,9 +1,0 @@
-  {
-  "AppSettings": {
-    "VersionFile": "AllVersions.json",
-    "LogFile": "onedrive_updater.log",
-    "Architecture": "Both",
-    "MaxSubVersionCheck": "10",
-    "LastYearToBEIncluded": "25"
-  }
-}
