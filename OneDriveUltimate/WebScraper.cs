@@ -68,9 +68,9 @@ public static class WebScraper
         return versions;
     }
 
-/// <summary>
-/// Asynchronously checks for "hidden" OneDrive versions by generating potential version numbers
-/// THIS METHOD IS NOT USED CURRENTLY .. (Does not search in parallel we have it just in case we need it in future)
+    /// <summary>
+    /// Asynchronously checks for "hidden" OneDrive versions by generating potential version numbers
+    /// THIS METHOD IS NOT USED CURRENTLY .. (Does not search in parallel we have it just in case we need it in future)
     public static async Task<List<VersionInfo>> GetListOfHiddenVersions()
     {
         Utils.Log("function");
@@ -128,63 +128,77 @@ public static class WebScraper
 
         return hiddenVersions;
     }
-
-public static async Task<List<VersionInfo>> GetListOfHiddenVersionsParallel(List<VersionInfo> AllVersions)
-{
-
-    //var AllVersions = StorageManager.GetStoredVersions(Config.VersionFile);
-    int hiddenItemsSearchLimit = Config.MaxSubVersionCheck;
-
-    var hiddenVersions = new ConcurrentBag<VersionInfo>(); // thread-safe
-
-    using var httpClient = new HttpClient();
-
-    foreach (var version in AllVersions)
+    /// <summary>
+    /// Scans for “hidden” sub-versions of OneDrive that are not present in the provided version list.
+    /// Performs concurrent HTTP checks for candidate installer URLs (both x64 and x86) using parallel tasks.
+    /// </summary>
+    public static async Task<List<VersionInfo>> GetListOfHiddenVersionsParallel(List<VersionInfo> AllVersions)
     {
-        Utils.Log($"Checking subVersions in base version: {version.Version}");
 
-        string versionNumberStr = version.Version;
+        //var AllVersions = StorageManager.GetStoredVersions(Config.VersionFile);
+        int hiddenItemsSearchLimit = Config.MaxSubVersionCheck;
 
-        int lastDotIndex = versionNumberStr.LastIndexOf('.');
-        if (lastDotIndex == -1) continue;
+        // a data type act as bag and thread will grab from it at the same time
+        var hiddenVersions = new ConcurrentBag<VersionInfo>(); // thread-safe
 
-        string prefix = versionNumberStr.Substring(0, lastDotIndex + 1);
-        string lastPart = versionNumberStr.Substring(lastDotIndex + 1);
+        // the agent that resposible to initiate the requests
+        using var httpClient = new HttpClient();
 
-        if (!int.TryParse(lastPart, out int baseSubVersion))
-            continue;
+        foreach (var version in AllVersions)
+        {
+            Utils.Log($"Checking subVersions in base version: {version.Version}");
+            
+            // var to save the version number as a string
+            string versionNumberStr = version.Version;
 
-        // Generate candidate versions
-        var candidateTasks = Enumerable.Range(1, hiddenItemsSearchLimit)
-            .Select(async i =>
-            {
-                string candidateSubVersion = i.ToString("D4");
-                string candidateVersion = prefix + candidateSubVersion;
+            // get the index of the last dot (will be used to split the string)
+            int lastDotIndex = versionNumberStr.LastIndexOf('.');
+            if (lastDotIndex == -1) continue;
 
-                if (AllVersions.Any(v => v.Version == candidateVersion))
-                    return; // skip existing
+            //get a substring of thenumbers before the last dot 23.345.2234.
+            string prefix = versionNumberStr.Substring(0, lastDotIndex + 1);
+            //get a substring of thenumbers after the last dot .0001
+            string lastPart = versionNumberStr.Substring(lastDotIndex + 1);
 
-                string url64 = $"https://oneclient.sfx.ms/Win/Installers/{candidateVersion}/amd64/OneDriveSetup.exe";
-                string url32 = $"https://oneclient.sfx.ms/Win/Installers/{candidateVersion}/OneDriveSetup.exe";
 
-                if (await UrlExistsAsync(httpClient, url64) || await UrlExistsAsync(httpClient, url32))
+            if (!int.TryParse(lastPart, out int baseSubVersion))
+                continue;
+
+            // Generate candidate versions
+            var candidateTasks = Enumerable.Range(1, hiddenItemsSearchLimit)
+                .Select(async i =>
                 {
-                    hiddenVersions.Add(new VersionInfo
+                    //make sure the section is from 4 digits 0000
+                    string candidateSubVersion = i.ToString("D4");
+                    // combin the first part of string to the sub nuber that will be tested like 0007
+                    string candidateVersion = prefix + candidateSubVersion;
+
+                    if (AllVersions.Any(v => v.Version == candidateVersion))
+                        return; // skip existing
+
+                    // now the veersion we  have will be placed in a test url to check if its vaild or not 
+                    string url64 = $"https://oneclient.sfx.ms/Win/Installers/{candidateVersion}/amd64/OneDriveSetup.exe";
+                    string url32 = $"https://oneclient.sfx.ms/Win/Installers/{candidateVersion}/OneDriveSetup.exe";
+
+                    //if the function UrlExistsAsync returnds trueit will add the version to out hiddenlist of versions to be returned 
+                    if (await UrlExistsAsync(httpClient, url64) || await UrlExistsAsync(httpClient, url32))
                     {
-                        Version = candidateVersion,
-                        VersionDate = version.VersionDate
-                    });
-                    Utils.Log($"Hidden version found: {candidateVersion}");
-                }
-            });
+                        hiddenVersions.Add(new VersionInfo
+                        {
+                            Version = candidateVersion,
+                            VersionDate = version.VersionDate
+                        });
+                        Utils.Log($"Hidden version found: {candidateVersion}");
+                    }
+                });
 
-        // Run all candidate checks for this version concurrently
-        await Task.WhenAll(candidateTasks);
+            // Run all candidate checks for this version concurrently
+            await Task.WhenAll(candidateTasks);
+        }
+
+        Utils.Log("returning all hidden done");
+        return hiddenVersions.ToList();
     }
-
-    Utils.Log("returning all hidden done");
-    return hiddenVersions.ToList();
-}
 
 
     /// <summary>

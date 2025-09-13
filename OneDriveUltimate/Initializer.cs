@@ -38,18 +38,26 @@ public class Initializer
         return StorageManager.GetStoredVersions(Config.VersionFile);
     }
 
+    /// <summary>
+    /// a method to get all the hidden versions in betwen the version that they were found from the website 
+    /// </summary>
     public async static Task<List<VersionInfo>> HiddenInitWebScrapping(List<VersionInfo> AllVersions)
     {
         List<VersionInfo>? NewHiddenVersions = await WebScraper.GetListOfHiddenVersionsParallel(AllVersions);
         return NewHiddenVersions;
     }
 
+    /// <summary>
+    /// a methosd will compare 2 lists by item and it will return only the new items not found in theg otehr list
+    /// </summary>
     public static List<VersionInfo> CompareAndGetNewVersions(List<VersionInfo> onlineVersoins, List<VersionInfo> localVersions)
     {
         return StorageManager.CompareByItem(onlineVersoins, localVersions);
     }
 
-    //Task to return a combined list of new and hidden versions to be used in downloading and installing new versions
+    /// <summary>
+    /// Task to return a combined list of new and hidden versions to be used in downloading and installing new versions
+    /// </summary>
     public static List<VersionInfo> GetCombinedWebAndHiddenVersions(List<VersionInfo> newItems, List<VersionInfo> hiddenItems)
     {
         var combinedList = new List<VersionInfo>();
@@ -61,21 +69,27 @@ public class Initializer
     }
 
 
-    //Task to download new and hidden versions and save them to the download folder
+    /// <summary>
+    /// Task to download new and hidden versions and save them to the download folder
+    /// </summary>
     public async static Task<List<VersionInfo>> DownloadAllNewversions(List<VersionInfo> NewItems)
     {
         var downloadedVersionsList = await DownloadManager.DownloadNewVersions(NewItems);
         return downloadedVersionsList;
     }
 
-    //Task to install the new downloaded versions ... 
+    /// <summary>
+    /// Task to install the new downloaded versions ... 
+    /// </summary>
     public async static Task<List<VersionInfo>> InstallNewDownloadedVersions(List<VersionInfo> installerPaths, List<VersionInfo> LocalJsonList)
     {
         var ListOfInstalledVersions = await InstallationManager.InstallAndUninstallVersions(installerPaths,LocalJsonList);
         return ListOfInstalledVersions;
     }
 
-    //Task to add new versions and hidden versions to the local json file
+    /// <summary>
+    /// Task to add new versions and hidden versions to the local json file
+    /// </summary>
     public static void AddNewVersionsToJsonFile(List<VersionInfo> NewItemsList, List<VersionInfo> JsonList)
     {
         if (NewItemsList.Count > 0)
@@ -93,8 +107,9 @@ public class Initializer
         }
     }
 
-    //Cleanup and exit TO:
-    //Delete all files thats has been downloaded 
+    /// <summary>
+    /// Delete all files thats has been downloaded 
+    /// </summary>
     public static void Cleanup()
     {
         try

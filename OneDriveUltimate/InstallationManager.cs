@@ -4,14 +4,23 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 
+/// <summary>
+/// Handles installation and uninstallation of OneDrive versions on Windows systems.
+/// Includes methods to verify installation, run installers/uninstallers, 
+/// and perform installation/uninstallation cycles for multiple versions.
+/// </summary>
 public static class InstallationManager
 {
 
+    // <summary>
+    /// Uninstalls OneDrive using a specific installer.
+    /// Performs fallback uninstallation if needed and verifies removal.
+    /// </summary>
     public static async Task<bool> UninstallVersion(string installerPath)
-    { 
+    {
         try
         {
-            var IsInstalled =  VerifyInstallation();
+            var IsInstalled = VerifyInstallation();
             // Check if actually installed first
             if (!IsInstalled)
             {
@@ -21,32 +30,32 @@ public static class InstallationManager
 
             Utils.Log("UninstallVersion :::: Uninstalling...");
             bool uninstallSuccess = await RunInstaller(installerPath, "/uninstall /silent");
-            
+
             //Fall back method incase if the uninstall via the installer exe fails
             if (!uninstallSuccess)
             {
                 Utils.Log($"UninstallVersion :::: Uninstallation Terminal Process failed Trying the Fall Back method ::::: for {installerPath}", "ERROR");
                 uninstallSuccess = await UninstallCurrentVersion();
             }
-            
+
             // if it still fail return false
             if (!uninstallSuccess)
             {
                 Utils.Log($"UninstallVersion :::: Uninstallation Terminal Process failed for {installerPath}", "ERROR");
                 return false;
             }
-            
+
             // Verify uninstallation
             Utils.Log("UninstallVersion :::: Verifying uninstallation...");
-            await Task.Delay(TimeSpan.FromSeconds(60)); 
-            IsInstalled =  VerifyInstallation();
-            
+            await Task.Delay(TimeSpan.FromSeconds(60));
+            IsInstalled = VerifyInstallation();
+
             if (IsInstalled)
             {
                 Utils.Log("UninstallVersion :::: Uninstallation verification failed - OneDrive still detected", "ERROR");
                 return false;
             }
-            
+
             Utils.Log("UninstallVersion :::: Uninstallation completed successfully");
             return true;
         }
@@ -54,15 +63,20 @@ public static class InstallationManager
         {
             Utils.Log($"UninstallVersion :::: Error during uninstallation: {ex.Message}", "ERROR");
             return false;
-        }     
+        }
 
     }
 
-    public static async Task<bool> UninstallCurrentVersion(){ 
+    /// <summary>
+    /// Attempts to uninstall the currently installed version of OneDrive.
+    /// Searches common installer locations and runs the uninstallation silently.
+    /// </summary>
+    public static async Task<bool> UninstallCurrentVersion()
+    {
         try
         {
             // Try to find OneDrive installer in common locations to uninstall
-            string[] possibleInstallerPaths = 
+            string[] possibleInstallerPaths =
             {
                 Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Windows), "System32", "OneDriveSetup.exe"),
                 Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Windows), "SysWOW64", "OneDriveSetup.exe"),
@@ -71,7 +85,8 @@ public static class InstallationManager
                 Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "Microsoft OneDrive", "OneDriveSetup.exe"),
                 Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Microsoft", "OneDrive", "OneDriveSetup.exe")
             };
-            
+
+            // loop all the possible paths and if one of them worked it will go ahead and uninstall 
             foreach (var installerPath in possibleInstallerPaths)
             {
                 if (File.Exists(installerPath))
@@ -80,7 +95,7 @@ public static class InstallationManager
                     return await RunInstaller(installerPath, "/uninstall /silent");
                 }
             }
-            
+
             Utils.Log("Current ::::  No OneDrive installer found for uninstallation", "WARNING");
             return false;
         }
@@ -90,12 +105,18 @@ public static class InstallationManager
             return false;
         }
     }
+    
+    /// <summary>
+    /// Installs OneDrive from a given installer path.
+    /// If a previous version is installed, it uninstalls it first.
+    /// Verifies installation after execution.
+    /// </summary>
     public static async Task<bool> InstallVersion(string installerPath)
     {
         try
         {
             // check if we have a version already installed so we have to uninstall that version first before we install the new version
-            var IsThereAnyVersionInstalled =  VerifyInstallation();
+            var IsThereAnyVersionInstalled = VerifyInstallation();
             if (IsThereAnyVersionInstalled)
             {
                 Utils.Log($"InstallVersion :::: OneDrive is already installed. Uninstalling current version first...");
@@ -107,6 +128,7 @@ public static class InstallationManager
                 }
             }
 
+            // calling the method to install the version be passing arguments and path
             Utils.Log($"InstallVersion :::: Installing {Path.GetFileName(installerPath)}...");
             bool installSuccess = await RunInstaller(installerPath, "/silent");
 
@@ -118,7 +140,7 @@ public static class InstallationManager
 
             // Verify installation
             Utils.Log("InstallVersion :::: Verifying installation...");
-            bool isInstalled =  VerifyInstallation();
+            bool isInstalled = VerifyInstallation();
 
             if (!isInstalled)
             {
@@ -136,6 +158,11 @@ public static class InstallationManager
         }
     }
 
+    /// <summary>
+    /// This is The main Function that calls the other functions
+    /// Performs an install/uninstall cycle for a list of downloaded versions.
+    /// Installs each stored installer, waits, then uninstalls it.
+    /// ==> Tracks successful cycles and updates JSON file with completed versions.
     public static async Task<List<VersionInfo>> InstallAndUninstallVersions(List<VersionInfo> downloadedVersions, List<VersionInfo> LocalJsonList)
     {
         var installedVersions = new List<VersionInfo>();
@@ -193,38 +220,46 @@ public static class InstallationManager
                 Utils.Log("----------------------------------------------------------");
             }
 
-             if(expectedInstalledFilesPerVersion == DVersion.InstallerStoredPaths.Count)
-             {
-                 DVersion.InstallUnInstallCycleSuccess = true;
-                 installedVersions.Add(DVersion);
+            if (expectedInstalledFilesPerVersion == DVersion.InstallerStoredPaths.Count)
+            {
+                DVersion.InstallUnInstallCycleSuccess = true;
+                installedVersions.Add(DVersion);
 
                 // this is still in testing which will add every successfull version directly incase if the process inturupted ...
                 try
                 {
                     Initializer.AddNewVersionsToJsonFile(new List<VersionInfo> { DVersion }, LocalJsonList);
-                        Utils.Log($"Cycle ::::  {DVersion.Version}  has been added to the Json File Successfully");
-                    }
+                    Utils.Log($"Cycle ::::  {DVersion.Version}  has been added to the Json File Successfully");
+                }
+
                 catch (Exception ex)
                 {
-                    Utils.Log($"Cycle ::::  {DVersion.Version} Could Not be added to the file But still added to the installed list Error Message : {ex}" , "WARNING");
+                    Utils.Log($"Cycle ::::  {DVersion.Version} Could Not be added to the file But still added to the installed list Error Message : {ex}", "WARNING");
                 }
 
 
-                 Utils.Log($"Cycle ::::  {DVersion.Version}  has been added to the installed Versions list");
-             }
-             else
-             {
-                 Utils.Log($"Cycle :::: Version {DVersion.Version} installation incomplete. Expected: {DVersion.InstallerStoredPaths.Count}, Successful: {expectedInstalledFilesPerVersion}", "WARNING");
-             }
+                Utils.Log($"Cycle ::::  {DVersion.Version}  has been added to the installed Versions list");
+            }
+            else
+            {
+                Utils.Log($"Cycle :::: Version {DVersion.Version} installation incomplete. Expected: {DVersion.InstallerStoredPaths.Count}, Successful: {expectedInstalledFilesPerVersion}", "WARNING");
+            }
 
         }
         return installedVersions;
     }
-    
+
+    /// <summary>
+    /// Basically its what pass the auguemnts to the power shell 
+    /// Executes an installer or uninstaller with specified arguments.
+    /// Runs the process as administrator in a hidden window and waits for completion.
+    /// </summary>
     private static async Task<bool> RunInstaller(string installerPath, string arguments)
     {
         try
         {
+            // this is a container to fill out configs for the power shell 
+            // basically creating the process settings and then we go ahead and start the process and passing the info to it
             var processInfo = new ProcessStartInfo
             {
                 FileName = installerPath,
@@ -234,7 +269,7 @@ public static class InstallationManager
                 CreateNoWindow = true,
                 WindowStyle = ProcessWindowStyle.Hidden
             };
-            
+
             using (var process = Process.Start(processInfo))
             {
                 if (process == null)
@@ -242,17 +277,17 @@ public static class InstallationManager
                     Utils.Log("Failed to start installer process", "ERROR");
                     return false;
                 }
-                
+
                 // Wait for exit with timeout (10 minutes)
-                bool exited = await Task.Run(() =>process.WaitForExit(600000));
-                
+                bool exited = await Task.Run(() => process.WaitForExit(600000));
+
                 if (!exited)
                 {
                     Utils.Log("Installer process timed out", "ERROR");
                     process.Kill();
                     return false;
                 }
-                
+
                 return process.ExitCode == 0;
             }
         }
@@ -262,18 +297,22 @@ public static class InstallationManager
             return false;
         }
     }
-    
+
+    /// <summary>
+    /// Verifies whether OneDrive is currently installed.
+    /// Checks known executable paths and running processes to Find it.
+    /// </summary>
     private static bool VerifyInstallation()
     {
         // Check if OneDrive is installed by looking for its executable
         // You might need to adjust these paths based on actual installation locations
-        string[] possiblePaths = 
+        string[] possiblePaths =
         {
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Microsoft", "OneDrive", "OneDrive.exe"),
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "Microsoft OneDrive", "OneDrive.exe"),
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "Microsoft OneDrive", "OneDrive.exe")
         };
-        
+
         // Check if any of the possible paths exist
         foreach (var path in possiblePaths)
         {
@@ -283,7 +322,7 @@ public static class InstallationManager
                 return true;
             }
         }
-        
+
         // Additional verification: Check if OneDrive process is running
         try
         {
@@ -298,7 +337,7 @@ public static class InstallationManager
         {
             Utils.Log($"Error checking processes: {ex.Message}", "WARNING");
         }
-        
+
         Utils.Log("No installation Found", "WARNING");
         return false;
     }

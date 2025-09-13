@@ -26,11 +26,11 @@ class Program
 
         Utils.Log("Starting Production 2.0 ...");
 
-        //First thing is To clean UP the evniroment make sure old files left over 
+        //1st thing is To clean UP the evniroment make sure old files left over 
         Initializer.Cleanup();
         Utils.Log("Cleanup is Done");
 
-        // Second Step is to get all the version we have saved in the local json file and load them in a list
+        //2nd Step is to get all the version we have saved in the local json file and load them in a list
         var JsonList = Initializer.LocalStorageScrapping();
         Utils.Log("Number Of versions in Local Json File :::    " + JsonList.Count.ToString());
 

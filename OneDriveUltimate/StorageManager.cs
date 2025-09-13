@@ -1,16 +1,24 @@
 using System.Text.Json;
 
+/// <summary>
+/// Handles storage and retrieval of OneDrive version information using JSON files.
+/// Provides methods to read, write, compare, and combine version lists.
+/// </summary>
 public static class StorageManager
 {
-    //private static string StorePath = "AllVersions.json";
-    //private static string testingPath = "testJson.json";
-
+    
+    // <summary>
+    /// Reads a JSON file from the given path and deserializes it into a list of VersionInfo objects List
+    /// </summary>
     public static List<VersionInfo> GetStoredVersions(string StorePath)
     {
         var json = File.ReadAllText(StorePath);
         return JsonSerializer.Deserialize<List<VersionInfo>>(json) ?? new List<VersionInfo>();
     }
 
+    /// <summary>
+    /// Serializes the provided list of VersionInfo objects and overwrites the configured JSON file.
+    /// </summary>
     public static void SaveVersionsOverwrite(List<VersionInfo> versions)
     {
 
@@ -41,7 +49,10 @@ public static class StorageManager
 
     }
 
-    // compare to our builtin json
+    /// <summary>
+    /// Compares two lists of VersionInfo objects and returns the items that are present in the first list but not in the second.
+    /// it is used to compare versions online vs the local list
+    /// </summary>
     public static List<VersionInfo> CompareByItem(List<VersionInfo> versions, List<VersionInfo> versions2)
     {
         var existingVersionsList = versions2;
@@ -64,13 +75,16 @@ public static class StorageManager
 
     }
 
+    /// <summary>
+    /// Combines two lists of VersionInfo objects and removes duplicates.
+    /// </summary>
     public static List<VersionInfo> CombineTwoLists(List<VersionInfo> list1, List<VersionInfo> list2)
     {
         var combined = list1.Concat(list2).Distinct().ToList();
         return combined;
     }
 
-    
 
 
-    }
+
+}
