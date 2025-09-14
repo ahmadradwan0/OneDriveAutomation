@@ -74,8 +74,6 @@ public static class WebScraper
     public static async Task<List<VersionInfo>> GetListOfHiddenVersions()
     {
         Utils.Log("function");
-        //var AllVersions = StorageManager.GetStoredVersions();
-        //test list
         var AllVersions = StorageManager.GetStoredVersions(Config.VersionFile);
         int hiddenItemsSearchLimit = Config.MaxSubVersionCheck;
 
@@ -128,13 +126,15 @@ public static class WebScraper
 
         return hiddenVersions;
     }
+
+
     /// <summary>
     /// Scans for “hidden” sub-versions of OneDrive that are not present in the provided version list.
     /// Performs concurrent HTTP checks for candidate installer URLs (both x64 and x86) using parallel tasks.
     /// </summary>
     public static async Task<List<VersionInfo>> GetListOfHiddenVersionsParallel(List<VersionInfo> AllVersions)
     {
-
+        
         //var AllVersions = StorageManager.GetStoredVersions(Config.VersionFile);
         int hiddenItemsSearchLimit = Config.MaxSubVersionCheck;
 
@@ -147,7 +147,7 @@ public static class WebScraper
         foreach (var version in AllVersions)
         {
             Utils.Log($"Checking subVersions in base version: {version.Version}");
-            
+
             // var to save the version number as a string
             string versionNumberStr = version.Version;
 
@@ -208,6 +208,7 @@ public static class WebScraper
     {
         try
         {
+            // it will send a get request and get back the reading of the request header and check for the response read if its 404 or 200 
             using var response = await client.SendAsync(
                 new HttpRequestMessage(HttpMethod.Head, url),
                 HttpCompletionOption.ResponseHeadersRead);
