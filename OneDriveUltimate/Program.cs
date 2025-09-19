@@ -217,6 +217,8 @@ class Program
             // # uncomment the line below to fill json with all versions from website table only (testing only)
             //await TestCase_FillJsonWithWebSiteVersionsOnly();
 
+            Utils.EmailSender();
+
             // # uncomment the line below to fill json with all versions from website table and hidden versions included (testing only)
             //await TestCase_FillJsonWithWebSiteAndHiddenVersion();
 
@@ -224,10 +226,10 @@ class Program
             //await TestCase_CheckIfDownloadManagerWorks();
 
             // # uncomment the line below to test if Install manager works (testing only)
-            await TestCase_CheckIfInstallManagerWorks();
+            //await TestCase_CheckIfInstallManagerWorks();
 
             // This main line to run the full production workflow
-            //await Production2_0();
+            await Production2_0();
 
             Utils.Log($"=== Task completed successfully at {DateTime.Now} ===");
         }

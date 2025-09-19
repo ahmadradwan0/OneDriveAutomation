@@ -1,4 +1,5 @@
 
+using System.Security.Cryptography;
 using Microsoft.Extensions.Configuration;
 
 public static class Config
@@ -25,6 +26,15 @@ public static class Config
     // this will represent the last year to be included when searching for new versions
     // Ex : 23 will include the search for new versions the year 2023 or technically from any version starts with 23.xxxx.xxxx.xxxx
     public static int LastYearToBEIncluded { get; set; }
+
+    // to assign the email addres wthat will be used to send emails in code from the config file 
+    public static string SenderEmailAddress { get; set; }
+
+    // email addresses of the recipients that will receive the email notification from the app
+    public static List<string> RecipientsEmailAddresses { get; set; }
+
+
+    // static constructor to initialize the static properties
     static Config()
     {
         // to grap the json file configs
@@ -36,12 +46,23 @@ public static class Config
 
         //initialize them 
         // data will be imported from the config.json file that will reside besids the exe
+        //note ; the ?? operator is used to provide a default value in case the key is not found in the json file
         DownloadPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\" + "Downloads" + "\\" + "OneDriveUpdaterVersions";
-        VersionFile = config["AppSettings:VersionFile"];
-        LogFile = config["AppSettings:LogFile"];
-        Architecture = config["AppSettings:Architecture"];
-        MaxSubVersionCheck = int.Parse(config["AppSettings:MaxSubVersionCheck"]);
-        LastYearToBEIncluded = int.Parse(config["AppSettings:LastYearToBEIncluded"]);
+
+        VersionFile = config.GetValue<string>("AppSettings:VersionFile","AllVersions.json");
+
+        LogFile = config.GetValue<string>("AppSettings:LogFile", "onedrive_updater.log");
+
+        Architecture = config.GetValue<string>("AppSettings:Architecture", "Both");
+
+        MaxSubVersionCheck = config.GetValue<int>("AppSettings:MaxSubVersionCheck", 10);
+
+        LastYearToBEIncluded = config.GetValue<int>("AppSettings:LastYearToBEIncluded", 25);
+        // old method used : int.Parse(config["AppSettings:LastYearToBEIncluded"] ?? "25");
+
+        SenderEmailAddress = config.GetValue<string>("AppSettings:senderEmailAddress","apps@tlprojectautomation.com");
+
+        RecipientsEmailAddresses = config.GetSection("AppSettings:recipientsEmailAddresses").Get<List<string>>() ?? new List<string> { "","","" };
 
     }
 }

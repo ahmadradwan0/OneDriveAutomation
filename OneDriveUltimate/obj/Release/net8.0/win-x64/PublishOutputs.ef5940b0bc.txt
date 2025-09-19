@@ -1,0 +1,5 @@
+C:\Users\admin\Desktop\8.0\CsharpOneDrive\OneDriveUltimate\bin\Release\net8.0\win-x64\publish\OneDriveUltimate.pdb
+C:\Users\admin\Desktop\8.0\CsharpOneDrive\OneDriveUltimate\bin\Release\net8.0\win-x64\publish\AllVersions.json
+C:\Users\admin\Desktop\8.0\CsharpOneDrive\OneDriveUltimate\bin\Release\net8.0\win-x64\publish\config.json
+C:\Users\admin\Desktop\8.0\CsharpOneDrive\OneDriveUltimate\bin\Release\net8.0\win-x64\publish\onedrive_updater.log
+C:\Users\admin\Desktop\8.0\CsharpOneDrive\OneDriveUltimate\bin\Release\net8.0\win-x64\publish\OneDriveUltimate.exe

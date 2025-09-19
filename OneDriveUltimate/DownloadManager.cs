@@ -93,6 +93,8 @@ public static class DownloadManager
                 // two urls for the 64-bit and 32-bit versions of the installer and placeholders for the version number
                 string version64Url = $"https://oneclient.sfx.ms/Win/Installers/{version.Version}/amd64/OneDriveSetup.exe";
                 string version32Url = $"https://oneclient.sfx.ms/Win/Installers/{version.Version}/OneDriveSetup.exe";
+                string version64ArmUrl = $"https://oneclient.sfx.ms/Win/Installers/{version.Version}/arm64/OneDriveSetup.exe";
+
 
                 // basically compines the download path where already been specified in the config with the version number 
                 // to create a unique folder for each version that where the installers will be saved
@@ -183,6 +185,25 @@ public static class DownloadManager
 
 
                     case "ARM64":
+                                        // the path64 here is the path of the installer it self inside the version folder we created above
+
+                        string path64Arm = Path.Combine(downloadPath, "OneDriveSetup_x64.exe");
+
+                        try
+                        {
+                            // here is the main calling for the helper function that downloads the file and handles the version info object
+                            await DownloadFileArchSensitive(client, version, path64Arm, version64ArmUrl);
+
+                            // we expect to download 1 file for this version se we increase the counter by 1 
+                            expectedDownloadsFilesPerVersion = 1;
+                        }
+                        catch (Exception ex)
+                        {
+                            Utils.Log($"Failed to download 64-bit version {version.Version}: {ex.Message}", "ERROR");
+                            // Continue to next file/version
+                        }
+
+                        break;
                     default:
                         Utils.Log("Unsupported or unknown architecture specified.", "WARNING");
                         break;

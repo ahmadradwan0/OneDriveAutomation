@@ -1722,3 +1722,560 @@
 [2025-09-11 02:24:48] [INFO] Stored versions updated (overwrite).
 [2025-09-11 02:24:48] [INFO] Number of versions in Local Json File after update :::    160
 [2025-09-11 02:24:48] [INFO] === Task completed successfully at 9/11/2025 2:24:48 AM ===
+[2025-09-18 04:07:13] [INFO] === Task started at 9/18/2025 4:07:13 AM ===
+[2025-09-18 04:07:13] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-18 04:07:13] [INFO] Number Of versions in Local Json File :::    160
+[2025-09-18 04:07:13] [INFO] Fetching versions from website table...
+[2025-09-18 04:07:14] [INFO] All versions fetched since The year :    25
+[2025-09-18 04:07:14] [INFO] Number Of versions From Website Table: 166
+[2025-09-18 04:07:14] [INFO] Stored versions updated (overwrite).
+[2025-09-18 04:07:14] [INFO] Number of versions in Local Json File after update :::    166
+[2025-09-18 04:07:53] [INFO] Email sent! Message ID: 1995bdd9747e785f
+[2025-09-18 04:07:53] [INFO] Email sent successfully.
+[2025-09-18 04:07:53] [INFO] === Task completed successfully at 9/18/2025 4:07:53 AM ===
+[2025-09-18 04:09:08] [INFO] === Task started at 9/18/2025 4:09:08 AM ===
+[2025-09-18 04:09:08] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-18 04:09:08] [INFO] Number Of versions in Local Json File :::    166
+[2025-09-18 04:09:08] [INFO] Fetching versions from website table...
+[2025-09-18 04:09:09] [INFO] All versions fetched since The year :    25
+[2025-09-18 04:09:09] [INFO] Number Of versions From Website Table: 166
+[2025-09-18 04:09:09] [INFO] Stored versions updated (overwrite).
+[2025-09-18 04:09:09] [INFO] Number of versions in Local Json File after update :::    166
+[2025-09-18 04:09:10] [INFO] Email sent! Message ID: 1995bdec4f73716b
+[2025-09-18 04:09:10] [INFO] Email sent successfully.
+[2025-09-18 04:09:10] [INFO] === Task completed successfully at 9/18/2025 4:09:10 AM ===
+[2025-09-18 05:09:52] [INFO] === Task started at 9/18/2025 5:09:52 AM ===
+[2025-09-18 05:09:52] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-18 05:09:52] [INFO] Number Of versions in Local Json File :::    166
+[2025-09-18 05:09:52] [INFO] Fetching versions from website table...
+[2025-09-18 05:09:53] [INFO] All versions fetched since The year :    25
+[2025-09-18 05:09:53] [INFO] Number Of versions From Website Table: 166
+[2025-09-18 05:09:53] [INFO] Stored versions updated (overwrite).
+[2025-09-18 05:09:53] [INFO] Number of versions in Local Json File after update :::    166
+[2025-09-18 05:09:53] [ERROR] Exception in EmailSenderService: Error:"unauthorized_client", Description:"Unauthorized", Uri:""
+[2025-09-18 05:09:53] [ERROR] Failed to send email.
+[2025-09-18 05:09:53] [INFO] === Task completed successfully at 9/18/2025 5:09:53 AM ===
+[2025-09-18 05:14:18] [INFO] === Task started at 9/18/2025 5:14:18 AM ===
+[2025-09-18 05:14:18] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-18 05:14:18] [INFO] Number Of versions in Local Json File :::    166
+[2025-09-18 05:14:18] [INFO] Fetching versions from website table...
+[2025-09-18 05:14:19] [INFO] All versions fetched since The year :    25
+[2025-09-18 05:14:19] [INFO] Number Of versions From Website Table: 166
+[2025-09-18 05:14:19] [INFO] Stored versions updated (overwrite).
+[2025-09-18 05:14:19] [INFO] Number of versions in Local Json File after update :::    166
+[2025-09-18 05:14:49] [INFO] Email sent! Message ID: 1995c1ae09f81776
+[2025-09-18 05:14:49] [INFO] Email sent successfully.
+[2025-09-18 05:14:49] [INFO] === Task completed successfully at 9/18/2025 5:14:49 AM ===
+[2025-09-18 05:17:38] [INFO] === Task started at 9/18/2025 5:17:38 AM ===
+[2025-09-18 05:17:38] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-18 05:17:38] [INFO] Number Of versions in Local Json File :::    166
+[2025-09-18 05:17:38] [INFO] Fetching versions from website table...
+[2025-09-18 05:17:38] [INFO] All versions fetched since The year :    25
+[2025-09-18 05:17:39] [INFO] Number Of versions From Website Table: 166
+[2025-09-18 05:17:39] [INFO] Stored versions updated (overwrite).
+[2025-09-18 05:17:39] [INFO] Number of versions in Local Json File after update :::    166
+[2025-09-18 05:17:39] [INFO] Email sent! Message ID: 1995c1d7824a95d1
+[2025-09-18 05:17:39] [INFO] Email sent successfully.
+[2025-09-18 05:17:39] [INFO] === Task completed successfully at 9/18/2025 5:17:39 AM ===
+[2025-09-18 05:33:15] [INFO] === Task started at 9/18/2025 5:33:15 AM ===
+[2025-09-18 05:33:15] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-18 05:33:15] [INFO] Number Of versions in Local Json File :::    166
+[2025-09-18 05:33:15] [INFO] Fetching versions from website table...
+[2025-09-18 05:33:15] [INFO] All versions fetched since The year :    25
+[2025-09-18 05:33:15] [INFO] Number Of versions From Website Table: 166
+[2025-09-18 05:33:15] [INFO] Stored versions updated (overwrite).
+[2025-09-18 05:33:15] [INFO] Number of versions in Local Json File after update :::    166
+[2025-09-18 05:33:16] [INFO] Email sent! Message ID: 1995c2bc4eba8983
+[2025-09-18 05:33:16] [INFO] Email sent successfully.
+[2025-09-18 05:33:16] [INFO] === Task completed successfully at 9/18/2025 5:33:16 AM ===
+[2025-09-18 15:28:35] [INFO] === Task started at 9/18/2025 3:28:35 PM ===
+[2025-09-18 15:28:35] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-18 15:28:35] [INFO] Number Of versions in Local Json File :::    166
+[2025-09-18 15:28:35] [INFO] Fetching versions from website table...
+[2025-09-18 15:28:36] [INFO] All versions fetched since The year :    25
+[2025-09-18 15:28:36] [INFO] Number Of versions From Website Table: 166
+[2025-09-18 15:28:36] [INFO] Stored versions updated (overwrite).
+[2025-09-18 15:28:36] [INFO] Number of versions in Local Json File after update :::    166
+[2025-09-18 15:28:37] [ERROR] Exception in EmailSenderService: Error:"unauthorized_client", Description:"Unauthorized", Uri:""
+[2025-09-18 15:28:37] [ERROR] Failed to send email.
+[2025-09-18 15:28:37] [INFO] === Task completed successfully at 9/18/2025 3:28:37 PM ===
+[2025-09-18 15:29:24] [INFO] === Task started at 9/18/2025 3:29:24 PM ===
+[2025-09-18 15:29:24] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-18 15:29:24] [INFO] Number Of versions in Local Json File :::    166
+[2025-09-18 15:29:24] [INFO] Fetching versions from website table...
+[2025-09-18 15:29:25] [INFO] All versions fetched since The year :    25
+[2025-09-18 15:29:25] [INFO] Number Of versions From Website Table: 166
+[2025-09-18 15:29:25] [INFO] Stored versions updated (overwrite).
+[2025-09-18 15:29:25] [INFO] Number of versions in Local Json File after update :::    166
+[2025-09-18 15:29:36] [INFO] Email sent! Message ID: 1995e4dbd98341b5
+[2025-09-18 15:29:36] [INFO] Email sent successfully.
+[2025-09-18 15:29:36] [INFO] === Task completed successfully at 9/18/2025 3:29:36 PM ===
+[2025-09-18 15:59:06] [INFO] === Task started at 9/18/2025 3:59:06 PM ===
+[2025-09-18 15:59:06] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-18 15:59:06] [INFO] Number Of versions in Local Json File :::    166
+[2025-09-18 15:59:06] [INFO] Fetching versions from website table...
+[2025-09-18 15:59:07] [INFO] All versions fetched since The year :    25
+[2025-09-18 15:59:07] [INFO] Number Of versions From Website Table: 166
+[2025-09-18 15:59:07] [INFO] Stored versions updated (overwrite).
+[2025-09-18 15:59:07] [INFO] Number of versions in Local Json File after update :::    166
+[2025-09-18 15:59:08] [INFO] Email sent! Message ID: 1995e68c356b216c
+[2025-09-18 15:59:08] [INFO] Email sent successfully.
+[2025-09-18 15:59:08] [INFO] === Task completed successfully at 9/18/2025 3:59:08 PM ===
+[2025-09-18 21:44:12] [INFO] === Task started at 9/18/2025 9:44:12 PM ===
+[2025-09-18 21:44:13] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-18 21:44:13] [INFO] Number Of versions in Local Json File :::    166
+[2025-09-18 21:44:13] [INFO] Fetching versions from website table...
+[2025-09-18 21:44:14] [INFO] All versions fetched since The year :    25
+[2025-09-18 21:44:14] [INFO] Number Of versions From Website Table: 168
+[2025-09-18 21:44:14] [INFO] Stored versions updated (overwrite).
+[2025-09-18 21:44:14] [INFO] Number of versions in Local Json File after update :::    168
+[2025-09-18 21:44:15] [INFO] Email sent! Message ID: 1995fa4bb6b4d8a6
+[2025-09-18 21:44:15] [INFO] Email sent successfully.
+[2025-09-18 21:44:15] [INFO] === Task completed successfully at 9/18/2025 9:44:15 PM ===
+[2025-09-18 21:59:44] [INFO] === Task started at 9/18/2025 9:59:44 PM ===
+[2025-09-18 21:59:44] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-18 21:59:44] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-18 21:59:44] [INFO] Fetching versions from website table...
+[2025-09-18 21:59:45] [INFO] All versions fetched since The year :    25
+[2025-09-18 21:59:45] [INFO] Number Of versions From Website Table: 168
+[2025-09-18 21:59:45] [INFO] Stored versions updated (overwrite).
+[2025-09-18 21:59:45] [INFO] Number of versions in Local Json File after update :::    168
+[2025-09-18 21:59:45] [INFO] Email sent! Message ID: 1995fb2ec9c787e2
+[2025-09-18 21:59:46] [INFO] Email sent! Message ID: 1995fb2ee5bc164b
+[2025-09-18 21:59:46] [INFO] Email sent successfully.
+[2025-09-18 21:59:46] [INFO] === Task completed successfully at 9/18/2025 9:59:46 PM ===
+[2025-09-18 22:15:07] [INFO] === Task started at 9/18/2025 10:15:07 PM ===
+[2025-09-18 22:15:07] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-18 22:15:08] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-18 22:15:08] [INFO] Fetching versions from website table...
+[2025-09-18 22:15:08] [INFO] All versions fetched since The year :    25
+[2025-09-18 22:15:08] [INFO] Number Of versions From Website Table: 168
+[2025-09-18 22:15:08] [INFO] Stored versions updated (overwrite).
+[2025-09-18 22:15:08] [INFO] Number of versions in Local Json File after update :::    168
+[2025-09-18 22:15:09] [INFO] Email sent! Message ID: 1995fc103067f80f
+[2025-09-18 22:15:09] [INFO] Email sent successfully.
+[2025-09-18 22:15:09] [INFO] === Task completed successfully at 9/18/2025 10:15:09 PM ===
+[2025-09-19 01:42:11] [INFO] === Task started at 9/19/2025 1:42:11 AM ===
+[2025-09-19 01:42:11] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-19 01:42:11] [INFO] Number Of versions in Local Json File :::    167
+[2025-09-19 01:42:11] [INFO] Fetching versions from website table...
+[2025-09-19 01:42:11] [INFO] All versions fetched since The year :    25
+[2025-09-19 01:42:11] [INFO] Number Of versions From Website Table: 168
+[2025-09-19 01:42:11] [INFO] Stored versions updated (overwrite).
+[2025-09-19 01:42:11] [INFO] Number of versions in Local Json File after update :::    168
+[2025-09-19 01:42:12] [INFO] Email sent! Message ID: 199607e94615d3e0
+[2025-09-19 01:42:12] [INFO] Email sent successfully.
+[2025-09-19 01:42:12] [INFO] === Task completed successfully at 9/19/2025 1:42:12 AM ===
+[2025-09-19 01:43:01] [INFO] === Task started at 9/19/2025 1:43:00 AM ===
+[2025-09-19 01:43:01] [INFO] Email sent! Message ID: 199607f54f7dca90
+[2025-09-19 01:43:01] [INFO] Email sent successfully.
+[2025-09-19 01:43:01] [INFO] Starting Production 2.0 ...
+[2025-09-19 01:43:01] [INFO] Deleted download directory and its contents.
+[2025-09-19 01:43:01] [INFO] Cleanup is Done
+[2025-09-19 01:43:01] [INFO] Number Of versions in Local Json File :::    167
+[2025-09-19 01:43:01] [INFO] Fetching versions from website table...
+[2025-09-19 01:43:02] [INFO] All versions fetched since The year :    25
+[2025-09-19 01:43:02] [INFO] Number Of versions From Website Table: 168
+[2025-09-19 01:43:02] [INFO] Checking subVersions in base version: 25.182.0917.0001
+[2025-09-19 01:43:03] [INFO] Checking subVersions in base version: 25.181.0916.0001
+[2025-09-19 01:43:05] [INFO] Checking subVersions in base version: 25.180.0915.0001
+[2025-09-19 01:43:06] [INFO] Checking subVersions in base version: 25.179.0914.0001
+[2025-09-19 01:43:08] [INFO] Checking subVersions in base version: 25.178.0911.0001
+[2025-09-19 01:43:09] [INFO] Checking subVersions in base version: 25.177.0910.0001
+[2025-09-19 01:43:10] [INFO] Checking subVersions in base version: 25.176.0909.0001
+[2025-09-19 01:43:11] [INFO] Checking subVersions in base version: 25.175.0908.0001
+[2025-09-19 01:43:13] [INFO] Checking subVersions in base version: 25.174.0907.0001
+[2025-09-19 01:43:13] [INFO] Hidden version found: 25.174.0907.0002
+[2025-09-19 01:43:14] [INFO] Checking subVersions in base version: 25.173.0904.0001
+[2025-09-19 01:43:15] [INFO] Checking subVersions in base version: 25.172.0903.0001
+[2025-09-19 01:43:16] [INFO] Checking subVersions in base version: 25.171.0902.0001
+[2025-09-19 01:43:17] [INFO] Checking subVersions in base version: 25.170.0901.0001
+[2025-09-19 01:43:17] [INFO] Hidden version found: 25.170.0901.0002
+[2025-09-19 01:43:19] [INFO] Checking subVersions in base version: 25.168.0828.0001
+[2025-09-19 01:43:20] [INFO] Checking subVersions in base version: 25.167.0827.0001
+[2025-09-19 01:43:21] [INFO] Checking subVersions in base version: 25.166.0826.0001
+[2025-09-19 01:43:22] [INFO] Checking subVersions in base version: 25.165.0825.0001
+[2025-09-19 01:43:23] [INFO] Checking subVersions in base version: 25.164.0824.0003
+[2025-09-19 01:43:23] [INFO] Hidden version found: 25.164.0824.0002
+[2025-09-19 01:43:25] [INFO] Checking subVersions in base version: 25.164.0824.0001
+[2025-09-19 01:43:25] [INFO] Hidden version found: 25.164.0824.0002
+[2025-09-19 01:43:25] [INFO] Checking subVersions in base version: 25.163.0821.0001
+[2025-09-19 01:43:26] [INFO] Checking subVersions in base version: 25.162.0820.0001
+[2025-09-19 01:43:27] [INFO] Checking subVersions in base version: 25.161.0819.0001
+[2025-09-19 01:43:28] [INFO] Checking subVersions in base version: 25.160.0818.0001
+[2025-09-19 01:43:30] [INFO] Checking subVersions in base version: 25.159.0817.0003
+[2025-09-19 01:43:30] [INFO] Hidden version found: 25.159.0817.0002
+[2025-09-19 01:43:31] [INFO] Checking subVersions in base version: 25.159.0817.0001
+[2025-09-19 01:43:31] [INFO] Hidden version found: 25.159.0817.0002
+[2025-09-19 01:43:31] [INFO] Checking subVersions in base version: 25.158.0814.0001
+[2025-09-19 01:43:32] [INFO] Checking subVersions in base version: 25.156.0812.0001
+[2025-09-19 01:43:33] [INFO] Checking subVersions in base version: 25.155.0811.0002
+[2025-09-19 01:43:34] [INFO] Checking subVersions in base version: 25.155.0811.0001
+[2025-09-19 01:43:34] [INFO] Checking subVersions in base version: 25.154.0810.0001
+[2025-09-19 01:43:36] [INFO] Checking subVersions in base version: 25.152.0806.0001
+[2025-09-19 01:43:37] [INFO] Checking subVersions in base version: 25.151.0805.0001
+[2025-09-19 01:43:38] [INFO] Checking subVersions in base version: 25.149.0803.0003
+[2025-09-19 01:43:38] [INFO] Hidden version found: 25.149.0803.0002
+[2025-09-19 01:43:39] [INFO] Checking subVersions in base version: 25.149.0803.0001
+[2025-09-19 01:43:39] [INFO] Hidden version found: 25.149.0803.0002
+[2025-09-19 01:43:39] [INFO] Checking subVersions in base version: 25.148.0731.0001
+[2025-09-19 01:43:41] [INFO] Checking subVersions in base version: 25.147.0730.0001
+[2025-09-19 01:43:42] [INFO] Checking subVersions in base version: 25.146.0729.0001
+[2025-09-19 01:43:43] [INFO] Checking subVersions in base version: 25.145.0728.0001
+[2025-09-19 01:43:43] [INFO] Hidden version found: 25.145.0728.0003
+[2025-09-19 01:43:44] [INFO] Checking subVersions in base version: 25.144.0724.0001
+[2025-09-19 01:43:45] [INFO] Checking subVersions in base version: 25.143.0723.0001
+[2025-09-19 01:43:47] [INFO] Checking subVersions in base version: 25.141.0721.0001
+[2025-09-19 01:43:48] [INFO] Checking subVersions in base version: 25.140.0720.0001
+[2025-09-19 01:43:49] [INFO] Checking subVersions in base version: 25.139.0717.0001
+[2025-09-19 01:43:50] [INFO] Checking subVersions in base version: 25.138.0716.0001
+[2025-09-19 01:43:51] [INFO] Checking subVersions in base version: 25.137.0715.0001
+[2025-09-19 01:43:53] [INFO] Checking subVersions in base version: 25.136.0714.0001
+[2025-09-19 01:43:54] [INFO] Checking subVersions in base version: 25.135.0713.0001
+[2025-09-19 01:43:55] [INFO] Checking subVersions in base version: 25.134.0710.0001
+[2025-09-19 01:43:56] [INFO] Checking subVersions in base version: 25.133.0709.0001
+[2025-09-19 01:43:56] [INFO] Checking subVersions in base version: 25.132.0708.0001
+[2025-09-19 01:43:58] [INFO] Checking subVersions in base version: 25.131.0707.0001
+[2025-09-19 01:43:59] [INFO] Checking subVersions in base version: 25.130.0706.0004
+[2025-09-19 01:43:59] [INFO] Hidden version found: 25.130.0706.0003
+[2025-09-19 01:44:00] [INFO] Checking subVersions in base version: 25.130.0706.0001
+[2025-09-19 01:44:00] [INFO] Hidden version found: 25.130.0706.0003
+[2025-09-19 01:44:00] [INFO] Checking subVersions in base version: 25.128.0702.0001
+[2025-09-19 01:44:01] [INFO] Checking subVersions in base version: 25.127.0701.0006
+[2025-09-19 01:44:01] [INFO] Hidden version found: 25.127.0701.0005
+[2025-09-19 01:44:01] [INFO] Hidden version found: 25.127.0701.0004
+[2025-09-19 01:44:01] [INFO] Hidden version found: 25.127.0701.0003
+[2025-09-19 01:44:02] [INFO] Checking subVersions in base version: 25.126.0701.0001
+[2025-09-19 01:44:03] [INFO] Checking subVersions in base version: 25.124.0626.0001
+[2025-09-19 01:44:04] [INFO] Checking subVersions in base version: 25.123.0625.0001
+[2025-09-19 01:44:05] [INFO] Checking subVersions in base version: 25.122.0624.0001
+[2025-09-19 01:44:05] [INFO] Hidden version found: 25.122.0624.0003
+[2025-09-19 01:44:05] [INFO] Hidden version found: 25.122.0624.0004
+[2025-09-19 01:44:05] [INFO] Hidden version found: 25.122.0624.0002
+[2025-09-19 01:44:06] [INFO] Checking subVersions in base version: 25.120.0622.0001
+[2025-09-19 01:44:08] [INFO] Checking subVersions in base version: 25.119.0619.0001
+[2025-09-19 01:44:09] [INFO] Checking subVersions in base version: 25.117.0617.0001
+[2025-09-19 01:44:10] [INFO] Checking subVersions in base version: 25.116.0616.0001
+[2025-09-19 01:44:11] [INFO] Checking subVersions in base version: 25.115.0615.0002
+[2025-09-19 01:44:12] [INFO] Checking subVersions in base version: 25.115.0615.0001
+[2025-09-19 01:44:12] [INFO] Checking subVersions in base version: 25.114.0612.0001
+[2025-09-19 01:44:13] [INFO] Checking subVersions in base version: 25.113.0611.0001
+[2025-09-19 01:44:15] [INFO] Checking subVersions in base version: 25.112.0610.0001
+[2025-09-19 01:44:16] [INFO] Checking subVersions in base version: 25.111.0609.0001
+[2025-09-19 01:44:17] [INFO] Checking subVersions in base version: 25.110.0608.0001
+[2025-09-19 01:44:17] [INFO] Hidden version found: 25.110.0608.0002
+[2025-09-19 01:44:18] [INFO] Checking subVersions in base version: 25.109.0605.0001
+[2025-09-19 01:44:19] [INFO] Checking subVersions in base version: 25.108.0604.0001
+[2025-09-19 01:44:21] [INFO] Checking subVersions in base version: 25.107.0603.0001
+[2025-09-19 01:44:22] [INFO] Checking subVersions in base version: 25.106.0602.0001
+[2025-09-19 01:44:23] [INFO] Checking subVersions in base version: 25.105.0601.0002
+[2025-09-19 01:44:24] [INFO] Checking subVersions in base version: 25.105.0601.0001
+[2025-09-19 01:44:24] [INFO] Checking subVersions in base version: 25.104.0529.0001
+[2025-09-19 01:44:25] [INFO] Checking subVersions in base version: 25.103.0528.0001
+[2025-09-19 01:44:26] [INFO] Checking subVersions in base version: 25.102.0527.0001
+[2025-09-19 01:44:27] [INFO] Checking subVersions in base version: 25.101.0526.0001
+[2025-09-19 01:44:27] [INFO] Hidden version found: 25.101.0526.0002
+[2025-09-19 01:44:28] [INFO] Checking subVersions in base version: 25.100.0525.0001
+[2025-09-19 01:44:30] [INFO] Checking subVersions in base version: 25.099.0522.0001
+[2025-09-19 01:44:30] [INFO] Checking subVersions in base version: 25.098.0521.0001
+[2025-09-19 01:44:32] [INFO] Checking subVersions in base version: 25.097.0520.0001
+[2025-09-19 01:44:33] [INFO] Checking subVersions in base version: 25.096.0519.0001
+[2025-09-19 01:44:34] [INFO] Checking subVersions in base version: 25.095.0518.0002
+[2025-09-19 01:44:35] [INFO] Checking subVersions in base version: 25.095.0518.0001
+[2025-09-19 01:44:35] [INFO] Checking subVersions in base version: 25.094.0515.0001
+[2025-09-19 01:44:36] [INFO] Checking subVersions in base version: 25.093.0514.0001
+[2025-09-19 01:44:37] [INFO] Checking subVersions in base version: 25.092.0513.0001
+[2025-09-19 01:44:38] [INFO] Checking subVersions in base version: 25.091.0512.0001
+[2025-09-19 01:44:38] [INFO] Hidden version found: 25.091.0512.0002
+[2025-09-19 01:44:40] [INFO] Checking subVersions in base version: 25.090.0511.0001
+[2025-09-19 01:44:41] [INFO] Checking subVersions in base version: 25.088.0507.0001
+[2025-09-19 01:44:42] [INFO] Checking subVersions in base version: 25.087.0506.0001
+[2025-09-19 01:44:43] [INFO] Checking subVersions in base version: 25.086.0505.0001
+[2025-09-19 01:44:44] [INFO] Checking subVersions in base version: 25.085.0504.0002
+[2025-09-19 01:44:45] [INFO] Checking subVersions in base version: 25.085.0504.0001
+[2025-09-19 01:44:46] [INFO] Checking subVersions in base version: 25.084.0501.0001
+[2025-09-19 01:44:47] [INFO] Checking subVersions in base version: 25.083.0430.0001
+[2025-09-19 01:44:48] [INFO] Checking subVersions in base version: 25.082.0429.0001
+[2025-09-19 01:44:49] [INFO] Checking subVersions in base version: 25.081.0428.0001
+[2025-09-19 01:44:50] [INFO] Checking subVersions in base version: 25.080.0427.0003
+[2025-09-19 01:44:50] [INFO] Hidden version found: 25.080.0427.0002
+[2025-09-19 01:44:51] [INFO] Checking subVersions in base version: 25.080.0427.0001
+[2025-09-19 01:44:51] [INFO] Hidden version found: 25.080.0427.0002
+[2025-09-19 01:44:51] [INFO] Checking subVersions in base version: 25.078.0424.0001
+[2025-09-19 01:44:52] [INFO] Checking subVersions in base version: 25.077.0422.0001
+[2025-09-19 01:44:53] [INFO] Checking subVersions in base version: 25.076.0421.0001
+[2025-09-19 01:44:54] [INFO] Checking subVersions in base version: 25.075.0420.0002
+[2025-09-19 01:44:55] [INFO] Checking subVersions in base version: 25.075.0420.0001
+[2025-09-19 01:44:55] [INFO] Checking subVersions in base version: 25.073.0416.0001
+[2025-09-19 01:44:57] [INFO] Checking subVersions in base version: 25.072.0415.0001
+[2025-09-19 01:44:58] [INFO] Checking subVersions in base version: 25.071.0414.0001
+[2025-09-19 01:44:59] [INFO] Checking subVersions in base version: 25.070.0413.0001
+[2025-09-19 01:45:00] [INFO] Checking subVersions in base version: 25.069.0410.0001
+[2025-09-19 01:45:01] [INFO] Checking subVersions in base version: 25.068.0409.0001
+[2025-09-19 01:45:02] [INFO] Checking subVersions in base version: 25.067.0408.0001
+[2025-09-19 01:45:03] [INFO] Checking subVersions in base version: 25.066.0407.0001
+[2025-09-19 01:45:05] [INFO] Checking subVersions in base version: 25.065.0406.0002
+[2025-09-19 01:45:06] [INFO] Checking subVersions in base version: 25.065.0406.0001
+[2025-09-19 01:45:06] [INFO] Checking subVersions in base version: 25.064.0403.0001
+[2025-09-19 01:45:07] [INFO] Checking subVersions in base version: 25.063.0402.0001
+[2025-09-19 01:45:08] [INFO] Checking subVersions in base version: 25.062.0401.0001
+[2025-09-19 01:45:09] [INFO] Checking subVersions in base version: 25.060.0330.0003
+[2025-09-19 01:45:09] [INFO] Hidden version found: 25.060.0330.0001
+[2025-09-19 01:45:10] [INFO] Checking subVersions in base version: 25.060.0330.0002
+[2025-09-19 01:45:10] [INFO] Hidden version found: 25.060.0330.0001
+[2025-09-19 01:45:10] [INFO] Checking subVersions in base version: 25.059.0327.0001
+[2025-09-19 01:45:12] [INFO] Checking subVersions in base version: 25.057.0325.0001
+[2025-09-19 01:45:13] [INFO] Checking subVersions in base version: 25.056.0324.0003
+[2025-09-19 01:45:13] [INFO] Hidden version found: 25.056.0324.0002
+[2025-09-19 01:45:14] [INFO] Checking subVersions in base version: 25.056.0324.0001
+[2025-09-19 01:45:14] [INFO] Hidden version found: 25.056.0324.0002
+[2025-09-19 01:45:14] [INFO] Checking subVersions in base version: 25.054.0320.0001
+[2025-09-19 01:45:15] [INFO] Checking subVersions in base version: 25.053.0319.0001
+[2025-09-19 01:45:16] [INFO] Checking subVersions in base version: 25.051.0317.0003
+[2025-09-19 01:45:17] [INFO] Checking subVersions in base version: 25.051.0317.0001
+[2025-09-19 01:45:17] [INFO] Checking subVersions in base version: 25.050.0316.0001
+[2025-09-19 01:45:19] [INFO] Checking subVersions in base version: 25.049.0313.0001
+[2025-09-19 01:45:19] [INFO] Checking subVersions in base version: 25.048.0312.0001
+[2025-09-19 01:45:21] [INFO] Checking subVersions in base version: 25.047.0311.0001
+[2025-09-19 01:45:22] [INFO] Checking subVersions in base version: 25.046.0310.0005
+[2025-09-19 01:45:22] [INFO] Hidden version found: 25.046.0310.0001
+[2025-09-19 01:45:22] [INFO] Hidden version found: 25.046.0310.0003
+[2025-09-19 01:45:22] [INFO] Hidden version found: 25.046.0310.0004
+[2025-09-19 01:45:23] [INFO] Checking subVersions in base version: 25.044.0306.0001
+[2025-09-19 01:45:24] [INFO] Checking subVersions in base version: 25.043.0305.0001
+[2025-09-19 01:45:25] [INFO] Checking subVersions in base version: 25.042.0304.0001
+[2025-09-19 01:45:26] [INFO] Checking subVersions in base version: 25.041.0303.0002
+[2025-09-19 01:45:26] [INFO] Hidden version found: 25.041.0303.0001
+[2025-09-19 01:45:27] [INFO] Checking subVersions in base version: 25.039.0227.0001
+[2025-09-19 01:45:29] [INFO] Checking subVersions in base version: 25.038.0226.0001
+[2025-09-19 01:45:30] [INFO] Checking subVersions in base version: 25.037.0225.0001
+[2025-09-19 01:45:31] [INFO] Checking subVersions in base version: 25.036.0224.0001
+[2025-09-19 01:45:32] [INFO] Checking subVersions in base version: 25.035.0223.0003
+[2025-09-19 01:45:32] [INFO] Hidden version found: 25.035.0223.0001
+[2025-09-19 01:45:32] [INFO] Hidden version found: 25.035.0223.0002
+[2025-09-19 01:45:33] [INFO] Checking subVersions in base version: 25.034.0220.0001
+[2025-09-19 01:45:34] [INFO] Checking subVersions in base version: 25.033.0219.0001
+[2025-09-19 01:45:35] [INFO] Checking subVersions in base version: 25.032.0218.0001
+[2025-09-19 01:45:36] [INFO] Checking subVersions in base version: 25.031.0217.0001
+[2025-09-19 01:45:36] [INFO] Hidden version found: 25.031.0217.0003
+[2025-09-19 01:45:37] [INFO] Hidden version found: 25.031.0217.0002
+[2025-09-19 01:45:37] [INFO] Checking subVersions in base version: 25.029.0213.0001
+[2025-09-19 01:45:38] [INFO] Checking subVersions in base version: 25.027.0211.0001
+[2025-09-19 01:45:39] [INFO] Checking subVersions in base version: 25.026.0210.0001
+[2025-09-19 01:45:41] [INFO] Checking subVersions in base version: 25.025.0209.0001
+[2025-09-19 01:45:42] [INFO] Checking subVersions in base version: 25.024.0206.0001
+[2025-09-19 01:45:43] [INFO] Checking subVersions in base version: 25.022.0204.0001
+[2025-09-19 01:45:44] [INFO] Checking subVersions in base version: 25.021.0203.0001
+[2025-09-19 01:45:45] [INFO] Checking subVersions in base version: 25.020.0202.0001
+[2025-09-19 01:45:46] [INFO] Checking subVersions in base version: 25.019.0130.0001
+[2025-09-19 01:45:48] [INFO] Checking subVersions in base version: 25.018.0129.0001
+[2025-09-19 01:45:49] [INFO] Checking subVersions in base version: 25.017.0128.0001
+[2025-09-19 01:45:50] [INFO] Checking subVersions in base version: 25.016.0127.0001
+[2025-09-19 01:45:51] [INFO] Checking subVersions in base version: 25.015.0126.0002
+[2025-09-19 01:45:51] [INFO] Hidden version found: 25.015.0126.0001
+[2025-09-19 01:45:52] [INFO] Checking subVersions in base version: 25.010.0119.0002
+[2025-09-19 01:45:53] [INFO] Checking subVersions in base version: 25.010.0119.0001
+[2025-09-19 01:45:53] [INFO] Checking subVersions in base version: 25.009.0116.0001
+[2025-09-19 01:45:54] [INFO] Checking subVersions in base version: 25.005.0112.0003
+[2025-09-19 01:45:54] [INFO] Hidden version found: 25.005.0112.0001
+[2025-09-19 01:45:55] [INFO] Checking subVersions in base version: 25.005.0112.0002
+[2025-09-19 01:45:55] [INFO] Hidden version found: 25.005.0112.0001
+[2025-09-19 01:45:55] [INFO] Checking subVersions in base version: 25.004.0109.0002
+[2025-09-19 01:45:55] [INFO] Hidden version found: 25.004.0109.0001
+[2025-09-19 01:45:56] [INFO] returning all hidden done
+[2025-09-19 01:45:56] [INFO] Number Of Hidden Versions Found: 38
+[2025-09-19 01:45:56] [INFO] Total Number Of All Versions From Website Table and Hidden Versions Combined : 206
+[2025-09-19 01:45:56] [INFO] Number Of New Versions To Be Downloaded: 39
+[2025-09-19 01:45:56] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.035.0223.0002/amd64/OneDriveSetup.exe...
+[2025-09-19 01:45:59] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.035.0223.0002\OneDriveSetup_x64.exe
+[2025-09-19 01:45:59] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.035.0223.0002/OneDriveSetup.exe...
+[2025-09-19 01:46:04] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.035.0223.0002\OneDriveSetup_x86.exe
+[2025-09-19 01:46:04] [INFO] Successfully prepared version 25.035.0223.0002 with 2 installer(s).
+[2025-09-19 01:46:04] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.046.0310.0004/amd64/OneDriveSetup.exe...
+[2025-09-19 01:46:11] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.046.0310.0004\OneDriveSetup_x64.exe
+[2025-09-19 01:46:11] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.046.0310.0004/OneDriveSetup.exe...
+[2025-09-19 01:46:17] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.046.0310.0004\OneDriveSetup_x86.exe
+[2025-09-19 01:46:17] [INFO] Successfully prepared version 25.046.0310.0004 with 2 installer(s).
+[2025-09-19 01:46:17] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.080.0427.0002/amd64/OneDriveSetup.exe...
+[2025-09-19 01:46:23] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.080.0427.0002\OneDriveSetup_x64.exe
+[2025-09-19 01:46:23] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.080.0427.0002/OneDriveSetup.exe...
+[2025-09-19 01:46:29] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.080.0427.0002\OneDriveSetup_x86.exe
+[2025-09-19 01:46:29] [INFO] Successfully prepared version 25.080.0427.0002 with 2 installer(s).
+[2025-09-19 01:46:29] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.091.0512.0002/amd64/OneDriveSetup.exe...
+[2025-09-19 01:46:36] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.091.0512.0002\OneDriveSetup_x64.exe
+[2025-09-19 01:46:36] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.091.0512.0002/OneDriveSetup.exe...
+[2025-09-19 01:46:42] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.091.0512.0002\OneDriveSetup_x86.exe
+[2025-09-19 01:46:42] [INFO] Successfully prepared version 25.091.0512.0002 with 2 installer(s).
+[2025-09-19 01:46:42] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.005.0112.0001/amd64/OneDriveSetup.exe...
+[2025-09-19 01:46:48] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.005.0112.0001\OneDriveSetup_x64.exe
+[2025-09-19 01:46:48] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.005.0112.0001/OneDriveSetup.exe...
+[2025-09-19 01:46:54] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.005.0112.0001\OneDriveSetup_x86.exe
+[2025-09-19 01:46:54] [INFO] Successfully prepared version 25.005.0112.0001 with 2 installer(s).
+[2025-09-19 01:46:54] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.015.0126.0001/amd64/OneDriveSetup.exe...
+[2025-09-19 01:47:01] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.015.0126.0001\OneDriveSetup_x64.exe
+[2025-09-19 01:47:01] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.015.0126.0001/OneDriveSetup.exe...
+[2025-09-19 01:47:06] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.015.0126.0001\OneDriveSetup_x86.exe
+[2025-09-19 01:47:06] [INFO] Successfully prepared version 25.015.0126.0001 with 2 installer(s).
+[2025-09-19 01:47:06] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.031.0217.0003/amd64/OneDriveSetup.exe...
+[2025-09-19 01:47:08] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.031.0217.0003\OneDriveSetup_x64.exe
+[2025-09-19 01:47:08] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.031.0217.0003/OneDriveSetup.exe...
+[2025-09-19 01:47:14] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.031.0217.0003\OneDriveSetup_x86.exe
+[2025-09-19 01:47:14] [INFO] Successfully prepared version 25.031.0217.0003 with 2 installer(s).
+[2025-09-19 01:47:14] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.110.0608.0002/amd64/OneDriveSetup.exe...
+[2025-09-19 01:47:15] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.110.0608.0002\OneDriveSetup_x64.exe
+[2025-09-19 01:47:15] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.110.0608.0002/OneDriveSetup.exe...
+[2025-09-19 01:47:18] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.110.0608.0002\OneDriveSetup_x86.exe
+[2025-09-19 01:47:18] [INFO] Successfully prepared version 25.110.0608.0002 with 2 installer(s).
+[2025-09-19 01:47:18] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.130.0706.0003/amd64/OneDriveSetup.exe...
+[2025-09-19 01:47:21] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.130.0706.0003\OneDriveSetup_x64.exe
+[2025-09-19 01:47:21] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.130.0706.0003/OneDriveSetup.exe...
+[2025-09-19 01:47:27] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.130.0706.0003\OneDriveSetup_x86.exe
+[2025-09-19 01:47:27] [INFO] Successfully prepared version 25.130.0706.0003 with 2 installer(s).
+[2025-09-19 01:47:27] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.035.0223.0001/amd64/OneDriveSetup.exe...
+[2025-09-19 01:47:33] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.035.0223.0001\OneDriveSetup_x64.exe
+[2025-09-19 01:47:33] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.035.0223.0001/OneDriveSetup.exe...
+[2025-09-19 01:47:39] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.035.0223.0001\OneDriveSetup_x86.exe
+[2025-09-19 01:47:39] [INFO] Successfully prepared version 25.035.0223.0001 with 2 installer(s).
+[2025-09-19 01:47:39] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.056.0324.0002/amd64/OneDriveSetup.exe...
+[2025-09-19 01:47:45] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.056.0324.0002\OneDriveSetup_x64.exe
+[2025-09-19 01:47:45] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.056.0324.0002/OneDriveSetup.exe...
+[2025-09-19 01:47:51] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.056.0324.0002\OneDriveSetup_x86.exe
+[2025-09-19 01:47:51] [INFO] Successfully prepared version 25.056.0324.0002 with 2 installer(s).
+[2025-09-19 01:47:51] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.122.0624.0003/amd64/OneDriveSetup.exe...
+[2025-09-19 01:47:55] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.122.0624.0003\OneDriveSetup_x64.exe
+[2025-09-19 01:47:55] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.122.0624.0003/OneDriveSetup.exe...
+[2025-09-19 01:48:01] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.122.0624.0003\OneDriveSetup_x86.exe
+[2025-09-19 01:48:01] [INFO] Successfully prepared version 25.122.0624.0003 with 2 installer(s).
+[2025-09-19 01:48:01] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.127.0701.0005/amd64/OneDriveSetup.exe...
+[2025-09-19 01:48:08] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.127.0701.0005\OneDriveSetup_x64.exe
+[2025-09-19 01:48:08] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.127.0701.0005/OneDriveSetup.exe...
+[2025-09-19 01:48:14] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.127.0701.0005\OneDriveSetup_x86.exe
+[2025-09-19 01:48:14] [INFO] Successfully prepared version 25.127.0701.0005 with 2 installer(s).
+[2025-09-19 01:48:14] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.149.0803.0002/amd64/OneDriveSetup.exe...
+[2025-09-19 01:48:20] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.149.0803.0002\OneDriveSetup_x64.exe
+[2025-09-19 01:48:20] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.149.0803.0002/OneDriveSetup.exe...
+[2025-09-19 01:48:23] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.149.0803.0002\OneDriveSetup_x86.exe
+[2025-09-19 01:48:23] [INFO] Successfully prepared version 25.149.0803.0002 with 2 installer(s).
+[2025-09-19 01:48:23] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.004.0109.0001/amd64/OneDriveSetup.exe...
+[2025-09-19 01:48:26] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.004.0109.0001\OneDriveSetup_x64.exe
+[2025-09-19 01:48:26] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.004.0109.0001/OneDriveSetup.exe...
+[2025-09-19 01:48:32] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.004.0109.0001\OneDriveSetup_x86.exe
+[2025-09-19 01:48:32] [INFO] Successfully prepared version 25.004.0109.0001 with 2 installer(s).
+[2025-09-19 01:48:32] [INFO] C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.005.0112.0001\OneDriveSetup_x64.exe already exists at C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.005.0112.0001\OneDriveSetup_x64.exe, skipping download.
+[2025-09-19 01:48:32] [INFO] C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.005.0112.0001\OneDriveSetup_x86.exe already exists at C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.005.0112.0001\OneDriveSetup_x86.exe, skipping download.
+[2025-09-19 01:48:32] [INFO] Successfully prepared version 25.005.0112.0001 with 2 installer(s).
+[2025-09-19 01:48:32] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.031.0217.0002/amd64/OneDriveSetup.exe...
+[2025-09-19 01:48:36] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.031.0217.0002\OneDriveSetup_x64.exe
+[2025-09-19 01:48:36] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.031.0217.0002/OneDriveSetup.exe...
+[2025-09-19 01:48:41] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.031.0217.0002\OneDriveSetup_x86.exe
+[2025-09-19 01:48:41] [INFO] Successfully prepared version 25.031.0217.0002 with 2 installer(s).
+[2025-09-19 01:48:41] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.041.0303.0001/amd64/OneDriveSetup.exe...
+[2025-09-19 01:48:47] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.041.0303.0001\OneDriveSetup_x64.exe
+[2025-09-19 01:48:47] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.041.0303.0001/OneDriveSetup.exe...
+[2025-09-19 01:48:53] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.041.0303.0001\OneDriveSetup_x86.exe
+[2025-09-19 01:48:53] [INFO] Successfully prepared version 25.041.0303.0001 with 2 installer(s).
+[2025-09-19 01:48:53] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.046.0310.0003/amd64/OneDriveSetup.exe...
+[2025-09-19 01:48:59] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.046.0310.0003\OneDriveSetup_x64.exe
+[2025-09-19 01:48:59] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.046.0310.0003/OneDriveSetup.exe...
+[2025-09-19 01:49:05] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.046.0310.0003\OneDriveSetup_x86.exe
+[2025-09-19 01:49:05] [INFO] Successfully prepared version 25.046.0310.0003 with 2 installer(s).
+[2025-09-19 01:49:05] [INFO] C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.056.0324.0002\OneDriveSetup_x64.exe already exists at C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.056.0324.0002\OneDriveSetup_x64.exe, skipping download.
+[2025-09-19 01:49:05] [INFO] C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.056.0324.0002\OneDriveSetup_x86.exe already exists at C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.056.0324.0002\OneDriveSetup_x86.exe, skipping download.
+[2025-09-19 01:49:05] [INFO] Successfully prepared version 25.056.0324.0002 with 2 installer(s).
+[2025-09-19 01:49:05] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.060.0330.0001/amd64/OneDriveSetup.exe...
+[2025-09-19 01:49:11] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.060.0330.0001\OneDriveSetup_x64.exe
+[2025-09-19 01:49:11] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.060.0330.0001/OneDriveSetup.exe...
+[2025-09-19 01:49:20] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.060.0330.0001\OneDriveSetup_x86.exe
+[2025-09-19 01:49:20] [INFO] Successfully prepared version 25.060.0330.0001 with 2 installer(s).
+[2025-09-19 01:49:20] [INFO] C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.080.0427.0002\OneDriveSetup_x64.exe already exists at C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.080.0427.0002\OneDriveSetup_x64.exe, skipping download.
+[2025-09-19 01:49:20] [INFO] C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.080.0427.0002\OneDriveSetup_x86.exe already exists at C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.080.0427.0002\OneDriveSetup_x86.exe, skipping download.
+[2025-09-19 01:49:20] [INFO] Successfully prepared version 25.080.0427.0002 with 2 installer(s).
+[2025-09-19 01:49:20] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.101.0526.0002/amd64/OneDriveSetup.exe...
+[2025-09-19 01:49:21] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.101.0526.0002\OneDriveSetup_x64.exe
+[2025-09-19 01:49:21] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.101.0526.0002/OneDriveSetup.exe...
+[2025-09-19 01:49:26] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.101.0526.0002\OneDriveSetup_x86.exe
+[2025-09-19 01:49:26] [INFO] Successfully prepared version 25.101.0526.0002 with 2 installer(s).
+[2025-09-19 01:49:26] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.127.0701.0003/amd64/OneDriveSetup.exe...
+[2025-09-19 01:49:30] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.127.0701.0003\OneDriveSetup_x64.exe
+[2025-09-19 01:49:30] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.127.0701.0003/OneDriveSetup.exe...
+[2025-09-19 01:49:33] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.127.0701.0003\OneDriveSetup_x86.exe
+[2025-09-19 01:49:33] [INFO] Successfully prepared version 25.127.0701.0003 with 2 installer(s).
+[2025-09-19 01:49:33] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.127.0701.0004/amd64/OneDriveSetup.exe...
+[2025-09-19 01:49:40] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.127.0701.0004\OneDriveSetup_x64.exe
+[2025-09-19 01:49:40] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.127.0701.0004/OneDriveSetup.exe...
+[2025-09-19 01:49:46] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.127.0701.0004\OneDriveSetup_x86.exe
+[2025-09-19 01:49:46] [INFO] Successfully prepared version 25.127.0701.0004 with 2 installer(s).
+[2025-09-19 01:49:46] [INFO] C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.149.0803.0002\OneDriveSetup_x64.exe already exists at C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.149.0803.0002\OneDriveSetup_x64.exe, skipping download.
+[2025-09-19 01:49:46] [INFO] C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.149.0803.0002\OneDriveSetup_x86.exe already exists at C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.149.0803.0002\OneDriveSetup_x86.exe, skipping download.
+[2025-09-19 01:49:46] [INFO] Successfully prepared version 25.149.0803.0002 with 2 installer(s).
+[2025-09-19 01:49:46] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.159.0817.0002/amd64/OneDriveSetup.exe...
+[2025-09-19 01:49:49] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.159.0817.0002\OneDriveSetup_x64.exe
+[2025-09-19 01:49:49] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.159.0817.0002/OneDriveSetup.exe...
+[2025-09-19 01:49:55] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.159.0817.0002\OneDriveSetup_x86.exe
+[2025-09-19 01:49:55] [INFO] Successfully prepared version 25.159.0817.0002 with 2 installer(s).
+[2025-09-19 01:49:55] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.046.0310.0001/amd64/OneDriveSetup.exe...
+[2025-09-19 01:50:02] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.046.0310.0001\OneDriveSetup_x64.exe
+[2025-09-19 01:50:02] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.046.0310.0001/OneDriveSetup.exe...
+[2025-09-19 01:50:08] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.046.0310.0001\OneDriveSetup_x86.exe
+[2025-09-19 01:50:08] [INFO] Successfully prepared version 25.046.0310.0001 with 2 installer(s).
+[2025-09-19 01:50:08] [INFO] C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.060.0330.0001\OneDriveSetup_x64.exe already exists at C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.060.0330.0001\OneDriveSetup_x64.exe, skipping download.
+[2025-09-19 01:50:08] [INFO] C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.060.0330.0001\OneDriveSetup_x86.exe already exists at C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.060.0330.0001\OneDriveSetup_x86.exe, skipping download.
+[2025-09-19 01:50:08] [INFO] Successfully prepared version 25.060.0330.0001 with 2 installer(s).
+[2025-09-19 01:50:08] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.122.0624.0002/amd64/OneDriveSetup.exe...
+[2025-09-19 01:50:14] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.122.0624.0002\OneDriveSetup_x64.exe
+[2025-09-19 01:50:14] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.122.0624.0002/OneDriveSetup.exe...
+[2025-09-19 01:50:20] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.122.0624.0002\OneDriveSetup_x86.exe
+[2025-09-19 01:50:20] [INFO] Successfully prepared version 25.122.0624.0002 with 2 installer(s).
+[2025-09-19 01:50:20] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.122.0624.0004/amd64/OneDriveSetup.exe...
+[2025-09-19 01:50:23] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.122.0624.0004\OneDriveSetup_x64.exe
+[2025-09-19 01:50:23] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.122.0624.0004/OneDriveSetup.exe...
+[2025-09-19 01:50:27] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.122.0624.0004\OneDriveSetup_x86.exe
+[2025-09-19 01:50:27] [INFO] Successfully prepared version 25.122.0624.0004 with 2 installer(s).
+[2025-09-19 01:50:27] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.145.0728.0003/amd64/OneDriveSetup.exe...
+[2025-09-19 01:50:30] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.145.0728.0003\OneDriveSetup_x64.exe
+[2025-09-19 01:50:30] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.145.0728.0003/OneDriveSetup.exe...
+[2025-09-19 01:50:37] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.145.0728.0003\OneDriveSetup_x86.exe
+[2025-09-19 01:50:37] [INFO] Successfully prepared version 25.145.0728.0003 with 2 installer(s).
+[2025-09-19 01:50:37] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.164.0824.0002/amd64/OneDriveSetup.exe...
+[2025-09-19 01:50:38] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.164.0824.0002\OneDriveSetup_x64.exe
+[2025-09-19 01:50:38] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.164.0824.0002/OneDriveSetup.exe...
+[2025-09-19 01:50:41] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.164.0824.0002\OneDriveSetup_x86.exe
+[2025-09-19 01:50:41] [INFO] Successfully prepared version 25.164.0824.0002 with 2 installer(s).
+[2025-09-19 01:50:41] [INFO] C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.164.0824.0002\OneDriveSetup_x64.exe already exists at C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.164.0824.0002\OneDriveSetup_x64.exe, skipping download.
+[2025-09-19 01:50:42] [INFO] C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.164.0824.0002\OneDriveSetup_x86.exe already exists at C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.164.0824.0002\OneDriveSetup_x86.exe, skipping download.
+[2025-09-19 01:50:42] [INFO] Successfully prepared version 25.164.0824.0002 with 2 installer(s).
+[2025-09-19 01:50:42] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.170.0901.0002/amd64/OneDriveSetup.exe...
+[2025-09-19 01:50:44] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.170.0901.0002\OneDriveSetup_x64.exe
+[2025-09-19 01:50:44] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.170.0901.0002/OneDriveSetup.exe...
+[2025-09-19 01:50:45] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.170.0901.0002\OneDriveSetup_x86.exe
+[2025-09-19 01:50:45] [INFO] Successfully prepared version 25.170.0901.0002 with 2 installer(s).
+[2025-09-19 01:50:45] [INFO] C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.130.0706.0003\OneDriveSetup_x64.exe already exists at C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.130.0706.0003\OneDriveSetup_x64.exe, skipping download.
+[2025-09-19 01:50:45] [INFO] C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.130.0706.0003\OneDriveSetup_x86.exe already exists at C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.130.0706.0003\OneDriveSetup_x86.exe, skipping download.
+[2025-09-19 01:50:45] [INFO] Successfully prepared version 25.130.0706.0003 with 2 installer(s).
+[2025-09-19 01:50:45] [INFO] C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.159.0817.0002\OneDriveSetup_x64.exe already exists at C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.159.0817.0002\OneDriveSetup_x64.exe, skipping download.
+[2025-09-19 01:50:45] [INFO] C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.159.0817.0002\OneDriveSetup_x86.exe already exists at C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.159.0817.0002\OneDriveSetup_x86.exe, skipping download.
+[2025-09-19 01:50:45] [INFO] Successfully prepared version 25.159.0817.0002 with 2 installer(s).
+[2025-09-19 01:50:45] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.174.0907.0002/amd64/OneDriveSetup.exe...
+[2025-09-19 01:50:46] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.174.0907.0002\OneDriveSetup_x64.exe
+[2025-09-19 01:50:46] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.174.0907.0002/OneDriveSetup.exe...
+[2025-09-19 01:50:47] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.174.0907.0002\OneDriveSetup_x86.exe
+[2025-09-19 01:50:47] [INFO] Successfully prepared version 25.174.0907.0002 with 2 installer(s).
+[2025-09-19 01:50:47] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.022.0204.0001/amd64/OneDriveSetup.exe...
+[2025-09-19 01:50:54] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.022.0204.0001\OneDriveSetup_x64.exe
+[2025-09-19 01:50:54] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.022.0204.0001/OneDriveSetup.exe...
+[2025-09-19 01:50:57] [INFO] Saved to C:\Users\admin\Downloads\OneDriveUpdaterVersions\25.022.0204.0001\OneDriveSetup_x86.exe
+[2025-09-19 01:50:57] [INFO] Successfully prepared version 25.022.0204.0001 with 2 installer(s).
+[2025-09-19 01:50:57] [INFO] Number Of New Versions That has Been Successfully Downloaded: 39
+[2025-09-19 01:50:57] [INFO] Cycle :::: Installing OneDriveSetup_x64.exe...
+[2025-09-19 01:50:57] [WARNING] No installation Found
+[2025-09-19 01:50:57] [INFO] InstallVersion :::: Installing OneDriveSetup_x64.exe...
+[2025-09-19 01:51:15] [INFO] InstallVersion :::: Verifying installation...
+[2025-09-19 01:51:15] [INFO] Verified installation at: C:\Users\admin\AppData\Local\Microsoft\OneDrive\OneDrive.exe
+[2025-09-19 01:51:15] [INFO] InstallVersion :::: Installation completed successfully
+[2025-09-19 01:51:15] [INFO] Cycle :::: Verifying installation...
+[2025-09-19 01:51:15] [INFO] Verified installation at: C:\Users\admin\AppData\Local\Microsoft\OneDrive\OneDrive.exe
+[2025-09-19 01:51:15] [INFO] Cycle :::: Waiting before uninstallation 60 Seconds...
+[2025-09-19 01:52:15] [INFO] Cycle :::: Uninstalling...
+[2025-09-19 01:52:15] [INFO] Verified installation at: C:\Users\admin\AppData\Local\Microsoft\OneDrive\OneDrive.exe
+[2025-09-19 01:52:15] [INFO] UninstallVersion :::: Uninstalling...
+[2025-09-19 01:52:18] [INFO] UninstallVersion :::: Verifying uninstallation...
