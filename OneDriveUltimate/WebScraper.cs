@@ -17,7 +17,7 @@ public static class WebScraper
         /// encounters a version from a year older than the specified <paramref name="LastYearIncluded"/>,
         /// optimizing the process by not fetching irrelevant data.
         /// </remarks>
-    public static async Task<List<VersionInfo>> ScrapeHtmlAsync(string url, int? LastYearIncluded = 17)
+    public static async Task<List<VersionInfo>> ScrapeHtmlAsync(string url, int? LastYearIncluded = 25)
     {
         Utils.Log("Fetching versions from website table...");
 
@@ -68,10 +68,12 @@ public static class WebScraper
         return versions;
     }
 
-    /// <summary>
+    /// <summary>THIS METHOD IS NOT USED CURRENTLY .. (Does not search in parallel we have it just in case we need it in future)
     /// Asynchronously checks for "hidden" OneDrive versions by generating potential version numbers
-    /// THIS METHOD IS NOT USED CURRENTLY .. (Does not search in parallel we have it just in case we need it in future)
-    public static async Task<List<VersionInfo>> GetListOfHiddenVersions()
+    /// uncomment it if needed
+    /// </summary>
+    
+    /*public static async Task<List<VersionInfo>> GetListOfHiddenVersions()
     {
         Utils.Log("function");
         var AllVersions = StorageManager.GetStoredVersions(Config.VersionFile);
@@ -125,7 +127,7 @@ public static class WebScraper
         Utils.Log("returning all hidden done");
 
         return hiddenVersions;
-    }
+    }*/
 
 
     /// <summary>

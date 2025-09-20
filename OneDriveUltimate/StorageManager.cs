@@ -21,14 +21,14 @@ public static class StorageManager
     /// </summary>
     public static void SaveVersionsOverwrite(List<VersionInfo> versions)
     {
-
+        // convert the list of VersionInfo objects to json and save it to the file specified in config
         var json = JsonSerializer.Serialize(versions, new JsonSerializerOptions { WriteIndented = true });
         File.WriteAllText(Config.VersionFile, json);
         Utils.Log("Stored versions updated (overwrite).");
     }
 
     // This methos Not used currently ..  
-    public static void SaveVersionsCompareByItem(List<VersionInfo> versions)
+    /*public static void SaveVersionsCompareByItem(List<VersionInfo> versions)
     {
         var existingVersionsList = GetStoredVersions(Config.VersionFile);
 
@@ -47,7 +47,7 @@ public static class StorageManager
 
         SaveVersionsOverwrite(existingVersionsList);
 
-    }
+    } */
 
     /// <summary>
     /// Compares two lists of VersionInfo objects and returns the items that are present in the first list but not in the second.

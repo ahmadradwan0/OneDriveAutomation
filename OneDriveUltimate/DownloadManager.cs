@@ -50,7 +50,10 @@ public static class DownloadManager
         {
             try
             {
-                // calling async download function
+                // Call the helper function to download the file from the url and save it to the path
+                // arguments required : 1: HttpClient client to make the request and it is passed from the main function to reuse the same client
+                // 2: string url the url to download from
+                // 3: string filePath the path to save the file to
                 await DownloadFileFromURL(client, url, path);
 
                 // add the path to the list of paths in the version info object

@@ -2,10 +2,14 @@
 using System.Security.Cryptography;
 using Microsoft.Extensions.Configuration;
 
+/// <summary>
+/// This class basiaclly holds all the configuration settings needed across the app
+/// and its used as a static class so it can be accessed from anywhere and its currently used in almost all the classes
+/// </summary>
 public static class Config
 {
     private static readonly IConfiguration config;
-    
+
     // this is the path to download the installers to (default is user downloads folder + OneDriveUpdaterVersions)
     public static string DownloadPath { get; set; }
 
@@ -35,9 +39,11 @@ public static class Config
 
 
     // static constructor to initialize the static properties
+    // this will run once when the class is first accessed
     static Config()
     {
-        // to grap the json file configs
+        // grapping the config file information from config.json file
+        // this file should reside besides the exe file
         var appSettingsGrapper = new ConfigurationBuilder()
        .SetBasePath(Directory.GetCurrentDirectory())
        .AddJsonFile("config.json", optional: false, reloadOnChange: true);
@@ -47,9 +53,10 @@ public static class Config
         //initialize them 
         // data will be imported from the config.json file that will reside besids the exe
         //note ; the ?? operator is used to provide a default value in case the key is not found in the json file
+        //config.GetValue<Type> the irst argument is the key to look for and the second is the default value if the key is not found
         DownloadPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\" + "Downloads" + "\\" + "OneDriveUpdaterVersions";
 
-        VersionFile = config.GetValue<string>("AppSettings:VersionFile","AllVersions.json");
+        VersionFile = config.GetValue<string>("AppSettings:VersionFile", "AllVersions.json");
 
         LogFile = config.GetValue<string>("AppSettings:LogFile", "onedrive_updater.log");
 
@@ -60,9 +67,9 @@ public static class Config
         LastYearToBEIncluded = config.GetValue<int>("AppSettings:LastYearToBEIncluded", 25);
         // old method used : int.Parse(config["AppSettings:LastYearToBEIncluded"] ?? "25");
 
-        SenderEmailAddress = config.GetValue<string>("AppSettings:senderEmailAddress","apps@tlprojectautomation.com");
+        SenderEmailAddress = config.GetValue<string>("AppSettings:senderEmailAddress", "apps@tlprojectautomation.com");
 
-        RecipientsEmailAddresses = config.GetSection("AppSettings:recipientsEmailAddresses").Get<List<string>>() ?? new List<string> { "ahmad.radwan@threatlocker.com"};
+        RecipientsEmailAddresses = config.GetSection("AppSettings:recipientsEmailAddresses").Get<List<string>>() ?? new List<string> { "ahmad.radwan@threatlocker.com" };
 
     }
 }

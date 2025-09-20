@@ -9,6 +9,7 @@ using System.Net;
 using System.Net.Mail;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 
 /// <summary>
 /// class used for nethods run Globally across all app classes 
@@ -38,9 +39,9 @@ public static class Utils
 
 
 
-    public static void EmailSender(string errorMessage)
+    public static async Task EmailSender(string errorMessage)
     {
-        if (SendEmailUsingSmtp(errorMessage))
+        if (await SendEmailUsingSmtp(errorMessage))
         {
             Log("Email sent successfully.");
         }
@@ -51,26 +52,35 @@ public static class Utils
 
     }
 
-    private static bool SendEmailUsingSmtp(string errorMessage)
-    { 
-         try
+/// <summary>
+/// this method uses a smtp client to send emails
+/// the service used here is sendgrid by twilio
+/// if you want to use the same method with postmark just un comment the postmark lines and comment the sendgrid ones
+/// or if you need to keep using twilio sendgrid just replace the password key with your own user name stays as apikey
+/// port number by default is 587 for both services can be changed if needed
+/// </summary>
+/// <param name="errorMessage"></param>
+/// <returns></returns>
+    private static async Task<bool> SendEmailUsingSmtp(string errorMessage)
+    {
+        try
         {
             // The sender's email address
-            string from = "apps@tlprojectautomation.com";
+            string from = Config.SenderEmailAddress;
             List<string> toRecipients = Config.RecipientsEmailAddresses;
             string subject = "[CRITICAL] OneDrive Script Failed";
 
             // SMTP settings for a dedicated transactional email service
             // un comment to use postmark
             //string smtpServer = "smtp.postmarkapp.com"; 
-            string smtpServer = "smtp.sendgrid.net"; 
+            string smtpServer = "smtp.sendgrid.net";
             int smtpPort = 587;
 
             // The Postmark Server API Token acts as both the SMTP username and password.
             // Replace this placeholder with your actual Postmark Server API Token.
             //string postmarkApiToken = "16c8bcad-ebfd-4a2c-a111-65eb4a594586";
             //string sendGridApikey = ""; // if you want to use sendgrid replace the postmark api token with your sendgrid api key
-            
+
             string smtpUsername = "apikey";
             string smtpPassword = ""; // sendgrid
 
@@ -83,12 +93,22 @@ public static class Utils
                     mailMessage.To.Add(recipient);
                 }
                 mailMessage.Subject = subject;
-                // Set IsBodyHtml to false for plain text email
+                // Set IsBodyHtml to false for plain text email (Note I tried to use html but might go to junk mail)
                 mailMessage.IsBodyHtml = false;
-                
-                // The humanly-written plain text body of the email
-                string plainTextBody = $@" Hello, This email from your OneDrive script. An error has occurred during the last run. Please check the logs for more details. Error Message: {errorMessage} Thank you, OneDrive App";
-                
+
+                // This is the plain text body of the email
+                string plainTextBody = $@"
+                Hello,
+
+                This email is from your OneDrive script.
+                An error has occurred during the last run.
+                Please check the logs for more details.
+
+                Error Message:
+                {errorMessage}
+
+                Thank you,
+                OneDrive App";
                 mailMessage.Body = plainTextBody;
 
                 // Send the email using SmtpClient
@@ -96,7 +116,7 @@ public static class Utils
                 {
                     smtpClient.EnableSsl = true;
                     smtpClient.Credentials = new NetworkCredential(smtpUsername, smtpPassword);
-                    smtpClient.Send(mailMessage);
+                    await smtpClient.SendMailAsync(mailMessage);
                 }
             }
 
@@ -115,7 +135,16 @@ public static class Utils
         }
     }
 
-     private static bool EmailSenderServiceGoogleAPI(string errorMessage)
+
+/// <summary>/// THIS METHOD IS NOT USED RIGHT NOW CAUSE IT GOES TO JUNK MAIL THE FIRST TIME
+/// this code is not used anymore but kept for reference if needed in the future
+/// it uses the google gmail api to send emails
+/// the only thing you need to add to the project is to add a file called email.json
+///  that you can get from the google cloud console after creating a project and enabling the gmail api 
+/// </summary>
+/// <param name="errorMessage"></param>
+/// <returns></returns>
+    private static bool EmailSenderServiceGoogleAPI(string errorMessage)
     {
         try
         {

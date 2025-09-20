@@ -14,7 +14,7 @@ public static class InstallationManager
 
     // <summary>
     /// Uninstalls OneDrive using a specific installer.
-    /// Performs fallback uninstallation if needed and verifies removal.
+    /// Performs as a fallback if the standard uninstallation fails or when the installer is missing we have to use the fall back method
     /// </summary>
     public static async Task<bool> UninstallVersion(string installerPath)
     {
@@ -128,7 +128,7 @@ public static class InstallationManager
                 }
             }
 
-            // calling the method to install the version be passing arguments and path
+            // calling the method to install the version be passing arguments and installer path
             Utils.Log($"InstallVersion :::: Installing {Path.GetFileName(installerPath)}...");
             bool installSuccess = await RunInstaller(installerPath, "/silent");
 
@@ -138,7 +138,7 @@ public static class InstallationManager
                 return false;
             }
 
-            // Verify installation
+            // Verify installation by calling the method to verify installation
             Utils.Log("InstallVersion :::: Verifying installation...");
             bool isInstalled = VerifyInstallation();
 
@@ -260,6 +260,12 @@ public static class InstallationManager
         {
             // this is a container to fill out configs for the power shell 
             // basically creating the process settings and then we go ahead and start the process and passing the info to it
+            //filename : is the path to the installer
+            // arguments : the arguments to pass to the installer
+            // UseShellExecute : true to use the operating system shell to start the process
+            // Verb = "runas" to run the process as administrator
+            // CreateNoWindow = true to run the process without creating a new window
+            // WindowStyle = ProcessWindowStyle.Hidden to hide the window
             var processInfo = new ProcessStartInfo
             {
                 FileName = installerPath,
@@ -270,6 +276,9 @@ public static class InstallationManager
                 WindowStyle = ProcessWindowStyle.Hidden
             };
 
+            // Staring the process and waiting for it to exit
+            // if the process is empty or null it will log an error and return false
+            // waiting for exit with a timeout of 10 minutes if it exceed that it will kill the process and return false
             using (var process = Process.Start(processInfo))
             {
                 if (process == null)
@@ -305,7 +314,7 @@ public static class InstallationManager
     private static bool VerifyInstallation()
     {
         // Check if OneDrive is installed by looking for its executable
-        // You might need to adjust these paths based on actual installation locations
+        // these are the common paths where onedrive.exe is located we can add more if needed in future
         string[] possiblePaths =
         {
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Microsoft", "OneDrive", "OneDrive.exe"),
@@ -323,7 +332,7 @@ public static class InstallationManager
             }
         }
 
-        // Additional verification: Check if OneDrive process is running
+        // Additional verification: Check if OneDrive process is running means its installed and we have to uninstall it first
         try
         {
             var processes = Process.GetProcessesByName("OneDrive");
