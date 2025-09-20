@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OneDriveUltimate")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52dfaad56aa96a2cfb93cefe33ac30f4e26b900a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5658c169d650f8fe3befd3305e100baebf83afd6")]
 [assembly: System.Reflection.AssemblyProductAttribute("OneDriveUltimate")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OneDriveUltimate")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

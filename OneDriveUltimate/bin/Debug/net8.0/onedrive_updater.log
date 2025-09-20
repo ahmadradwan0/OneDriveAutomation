@@ -2279,3 +2279,265 @@
 [2025-09-19 01:52:15] [INFO] Verified installation at: C:\Users\admin\AppData\Local\Microsoft\OneDrive\OneDrive.exe
 [2025-09-19 01:52:15] [INFO] UninstallVersion :::: Uninstalling...
 [2025-09-19 01:52:18] [INFO] UninstallVersion :::: Verifying uninstallation...
+[2025-09-19 01:52:38] [INFO] === Task started at 9/19/2025 1:52:38 AM ===
+[2025-09-19 01:52:39] [INFO] Email sent! Message ID: 1996088251685531
+[2025-09-19 01:52:39] [INFO] Email sent successfully.
+[2025-09-19 01:52:39] [INFO] Starting Production 2.0 ...
+[2025-09-19 01:52:39] [INFO] Deleted download directory and its contents.
+[2025-09-19 01:52:39] [INFO] Cleanup is Done
+[2025-09-19 01:52:39] [INFO] Number Of versions in Local Json File :::    167
+[2025-09-19 01:52:39] [INFO] Fetching versions from website table...
+[2025-09-19 01:52:39] [INFO] All versions fetched since The year :    25
+[2025-09-19 01:52:39] [INFO] Number Of versions From Website Table: 168
+[2025-09-19 01:52:39] [INFO] Checking subVersions in base version: 25.182.0917.0001
+[2025-09-19 01:52:41] [INFO] Checking subVersions in base version: 25.181.0916.0001
+[2025-09-19 01:52:42] [INFO] Checking subVersions in base version: 25.180.0915.0001
+[2025-09-19 01:52:44] [INFO] Checking subVersions in base version: 25.179.0914.0001
+[2025-09-19 01:52:45] [INFO] Checking subVersions in base version: 25.178.0911.0001
+[2025-09-19 02:36:59] [INFO] === Task started at 9/19/2025 2:36:59 AM ===
+[2025-09-19 02:37:00] [INFO] Email sent! Message ID: 19960b0befeb3cca
+[2025-09-19 02:37:00] [INFO] Email sent successfully.
+[2025-09-19 02:37:00] [INFO] Starting Production 2.0 ...
+[2025-09-19 02:37:00] [INFO] Download directory does not exist, nothing to clean up.
+[2025-09-19 02:37:00] [INFO] Cleanup is Done
+[2025-09-19 02:37:00] [INFO] Number Of versions in Local Json File :::    167
+[2025-09-19 02:37:00] [INFO] Fetching versions from website table...
+[2025-09-19 02:37:00] [INFO] All versions fetched since The year :    25
+[2025-09-19 02:37:00] [INFO] Number Of versions From Website Table: 168
+[2025-09-19 02:37:00] [INFO] Checking subVersions in base version: 25.182.0917.0001
+[2025-09-19 02:37:02] [INFO] Checking subVersions in base version: 25.181.0916.0001
+[2025-09-19 02:37:03] [INFO] Checking subVersions in base version: 25.180.0915.0001
+[2025-09-19 02:37:05] [INFO] Checking subVersions in base version: 25.179.0914.0001
+[2025-09-19 03:00:38] [INFO] === Task started at 9/19/2025 3:00:38 AM ===
+[2025-09-19 03:00:38] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-19 03:00:38] [INFO] Number Of versions in Local Json File :::    167
+[2025-09-19 03:00:38] [INFO] Fetching versions from website table...
+[2025-09-19 03:00:38] [INFO] All versions fetched since The year :    25
+[2025-09-19 03:00:38] [INFO] Number Of versions From Website Table: 168
+[2025-09-19 03:00:38] [INFO] Stored versions updated (overwrite).
+[2025-09-19 03:00:38] [INFO] Number of versions in Local Json File after update :::    168
+[2025-09-19 03:00:39] [INFO] Email sent! Message ID: 19960c669cfed423
+[2025-09-19 03:00:39] [INFO] Email sent successfully.
+[2025-09-19 03:00:39] [INFO] === Task completed successfully at 9/19/2025 3:00:39 AM ===
+[2025-09-19 03:12:21] [INFO] === Task started at 9/19/2025 3:12:21 AM ===
+[2025-09-19 03:12:22] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-19 03:12:22] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-19 03:12:22] [INFO] Fetching versions from website table...
+[2025-09-19 03:12:22] [INFO] All versions fetched since The year :    25
+[2025-09-19 03:12:22] [INFO] Number Of versions From Website Table: 168
+[2025-09-19 03:12:22] [INFO] Stored versions updated (overwrite).
+[2025-09-19 03:12:22] [INFO] Number of versions in Local Json File after update :::    168
+[2025-09-19 03:12:22] [INFO] === Task completed successfully at 9/19/2025 3:12:22 AM ===
+[2025-09-19 03:13:34] [INFO] === Task started at 9/19/2025 3:13:34 AM ===
+[2025-09-19 03:13:34] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-19 03:13:34] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-19 03:13:34] [INFO] Fetching versions from website table...
+[2025-09-19 03:13:34] [ERROR] === Task failed at 9/19/2025 3:13:34 AM: The 'htttps' scheme is not supported. ===
+[2025-09-19 03:13:35] [INFO] Email sent! Message ID: 19960d2413c4bfdc
+[2025-09-19 03:13:35] [INFO] Email sent successfully.
+[2025-09-19 03:24:44] [INFO] === Task started at 9/19/2025 3:24:44 AM ===
+[2025-09-19 03:24:44] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-19 03:24:44] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-19 03:24:44] [INFO] Fetching versions from website table...
+[2025-09-19 03:24:44] [ERROR] === Task failed at 9/19/2025 3:24:44 AM: The 'htttps' scheme is not supported. ===
+[2025-09-19 03:24:45] [INFO] Email sent! Message ID: 19960dc77c67b57e
+[2025-09-19 03:24:45] [INFO] Email sent successfully.
+[2025-09-19 03:30:05] [INFO] === Task started at 9/19/2025 3:30:05 AM ===
+[2025-09-19 03:30:05] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-19 03:30:05] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-19 03:30:05] [INFO] Fetching versions from website table...
+[2025-09-19 03:30:05] [ERROR] === Task failed at 9/19/2025 3:30:05 AM: The 'htttps' scheme is not supported. ===
+[2025-09-19 03:30:06] [INFO] Email sent! Message ID: 19960e15dd7f999f
+[2025-09-19 03:30:06] [INFO] Email sent successfully.
+[2025-09-19 15:32:03] [INFO] === Task started at 9/19/2025 3:32:03 PM ===
+[2025-09-19 15:32:03] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-19 15:32:04] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-19 15:32:04] [INFO] Fetching versions from website table...
+[2025-09-19 15:32:04] [ERROR] === Task failed at 9/19/2025 3:32:04 PM: The 'htttps' scheme is not supported. ===
+[2025-09-19 15:32:05] [INFO] Email sent! Message ID: 1996376602777889
+[2025-09-19 15:32:05] [INFO] Email sent! Message ID: 199637661cc2a250
+[2025-09-19 15:32:05] [INFO] Email sent successfully.
+[2025-09-19 15:59:38] [INFO] === Task started at 9/19/2025 3:59:38 PM ===
+[2025-09-19 15:59:38] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-19 15:59:38] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-19 15:59:38] [INFO] Fetching versions from website table...
+[2025-09-19 15:59:38] [ERROR] === Task failed at 9/19/2025 3:59:38 PM: No such host is known. (hhansbrender.com:443) ===
+[2025-09-19 15:59:39] [INFO] Email sent! Message ID: 199638f961a2e5c9
+[2025-09-19 15:59:39] [INFO] Email sent successfully.
+[2025-09-19 16:14:02] [INFO] === Task started at 9/19/2025 4:14:02 PM ===
+[2025-09-19 16:14:03] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-19 16:14:03] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-19 16:14:03] [INFO] Fetching versions from website table...
+[2025-09-19 16:14:03] [ERROR] === Task failed at 9/19/2025 4:14:03 PM: No such host is known. (hhansbrender.com:443) ===
+[2025-09-19 16:14:03] [INFO] Email sent! Message ID: 199639cc9bc26b26
+[2025-09-19 16:14:04] [INFO] Email sent! Message ID: 199639cca58eb0ba
+[2025-09-19 16:14:04] [INFO] Email sent successfully.
+[2025-09-19 16:27:57] [INFO] === Task started at 9/19/2025 4:27:57 PM ===
+[2025-09-19 16:27:57] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-19 16:27:57] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-19 16:27:57] [INFO] Fetching versions from website table...
+[2025-09-19 16:27:57] [ERROR] === Task failed at 9/19/2025 4:27:57 PM: No such host is known. (hhansbrender.com:443) ===
+[2025-09-19 16:27:57] [INFO] Email sent! Message ID: 19963a9820330df9
+[2025-09-19 16:27:57] [INFO] Email sent successfully.
+[2025-09-19 17:24:46] [INFO] === Task started at 9/19/2025 5:24:46 PM ===
+[2025-09-19 17:24:46] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-19 17:24:46] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-19 17:24:46] [INFO] Fetching versions from website table...
+[2025-09-19 17:24:46] [ERROR] === Task failed at 9/19/2025 5:24:46 PM: No such host is known. (hhansbrender.com:443) ===
+[2025-09-19 17:24:47] [INFO] Email sent! Message ID: 19963dd887537ffa
+[2025-09-19 17:24:47] [INFO] Email sent successfully.
+[2025-09-19 17:41:44] [INFO] === Task started at 9/19/2025 5:41:44 PM ===
+[2025-09-19 17:41:44] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-19 17:41:44] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-19 17:41:44] [INFO] Fetching versions from website table...
+[2025-09-19 17:41:44] [ERROR] === Task failed at 9/19/2025 5:41:44 PM: No such host is known. (hhansbrender.com:443) ===
+[2025-09-19 17:41:44] [INFO] Using sender email: user
+[2025-09-19 17:41:45] [INFO] Email sent! Message ID: 19963ed1356034b5
+[2025-09-19 17:41:45] [INFO] Email sent successfully.
+[2025-09-19 17:44:39] [INFO] === Task started at 9/19/2025 5:44:39 PM ===
+[2025-09-19 17:44:39] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-19 17:44:39] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-19 17:44:39] [INFO] Fetching versions from website table...
+[2025-09-19 17:44:39] [ERROR] === Task failed at 9/19/2025 5:44:39 PM: No such host is known. (hhansbrender.com:443) ===
+[2025-09-19 17:44:56] [INFO] Using sender email: user
+[2025-09-19 17:44:57] [INFO] Email sent! Message ID: 19963efff8061a51
+[2025-09-19 17:44:57] [INFO] Email sent successfully.
+[2025-09-19 17:49:20] [INFO] === Task started at 9/19/2025 5:49:20 PM ===
+[2025-09-19 17:49:20] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-19 17:49:20] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-19 17:49:20] [INFO] Fetching versions from website table...
+[2025-09-19 17:49:20] [ERROR] === Task failed at 9/19/2025 5:49:20 PM: No such host is known. (hhansbrender.com:443) ===
+[2025-09-19 17:49:20] [INFO] Using sender email: user
+[2025-09-19 17:49:21] [INFO] Email sent! Message ID: 19963f404f91294a
+[2025-09-19 17:49:21] [INFO] Email sent successfully.
+[2025-09-19 18:02:35] [INFO] === Task started at 9/19/2025 6:02:35 PM ===
+[2025-09-19 18:02:35] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-19 18:02:35] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-19 18:02:35] [INFO] Fetching versions from website table...
+[2025-09-19 18:02:35] [ERROR] === Task failed at 9/19/2025 6:02:35 PM: No such host is known. (hhansbrender.com:443) ===
+[2025-09-19 18:02:41] [INFO] Using sender email: user
+[2025-09-19 18:02:42] [INFO] Email sent! Message ID: 199640041bfbe930
+[2025-09-19 18:02:42] [INFO] Email sent successfully.
+[2025-09-19 18:32:00] [INFO] === Task started at 9/19/2025 6:32:00 PM ===
+[2025-09-19 18:32:01] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-19 18:32:01] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-19 18:32:01] [INFO] Fetching versions from website table...
+[2025-09-19 18:32:01] [ERROR] === Task failed at 9/19/2025 6:32:01 PM: No such host is known. (hhansbrender.com:443) ===
+[2025-09-19 18:32:08] [INFO] Using sender email: user
+[2025-09-19 18:32:09] [INFO] Email sent! Message ID: 199641b3793b3359
+[2025-09-19 18:32:09] [INFO] Email sent successfully.
+[2025-09-19 18:37:04] [INFO] === Task started at 9/19/2025 6:37:04 PM ===
+[2025-09-19 18:37:04] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-19 18:37:04] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-19 18:37:04] [INFO] Fetching versions from website table...
+[2025-09-19 18:37:04] [ERROR] === Task failed at 9/19/2025 6:37:04 PM: No such host is known. (hhansbrender.com:443) ===
+[2025-09-19 18:37:04] [INFO] Using sender email: user
+[2025-09-19 18:37:04] [INFO] Email sent! Message ID: 199641fb98329adb
+[2025-09-19 18:37:04] [INFO] Email sent successfully.
+[2025-09-19 18:40:15] [INFO] === Task started at 9/19/2025 6:40:15 PM ===
+[2025-09-19 18:40:15] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-19 18:40:15] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-19 18:40:15] [INFO] Fetching versions from website table...
+[2025-09-19 18:40:15] [ERROR] === Task failed at 9/19/2025 6:40:15 PM: No such host is known. (hhansbrender.com:443) ===
+[2025-09-19 18:40:15] [INFO] Using sender email: user
+[2025-09-19 18:40:16] [INFO] Email sent! Message ID: 1996422a2e21ada4
+[2025-09-19 18:40:16] [INFO] Email sent successfully.
+[2025-09-19 18:42:45] [INFO] === Task started at 9/19/2025 6:42:45 PM ===
+[2025-09-19 18:42:45] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-19 18:42:45] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-19 18:42:45] [INFO] Fetching versions from website table...
+[2025-09-19 18:42:46] [ERROR] === Task failed at 9/19/2025 6:42:46 PM: No such host is known. (hhansbrender.com:443) ===
+[2025-09-19 18:42:46] [INFO] Using sender email: user
+[2025-09-19 18:42:46] [INFO] Email sent! Message ID: 1996424f13ddb57a
+[2025-09-19 18:42:46] [INFO] Email sent successfully.
+[2025-09-19 18:47:56] [INFO] === Task started at 9/19/2025 6:47:56 PM ===
+[2025-09-19 18:47:56] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-19 18:47:56] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-19 18:47:56] [INFO] Fetching versions from website table...
+[2025-09-19 18:47:56] [ERROR] === Task failed at 9/19/2025 6:47:56 PM: No such host is known. (hhansbrender.com:443) ===
+[2025-09-19 18:47:56] [INFO] Using sender email: user
+[2025-09-19 18:47:57] [INFO] Email sent! Message ID: 1996429ae2895a23
+[2025-09-19 18:47:57] [INFO] Email sent successfully.
+[2025-09-19 18:50:50] [INFO] === Task started at 9/19/2025 6:50:50 PM ===
+[2025-09-19 18:50:50] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-19 18:50:51] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-19 18:50:51] [INFO] Fetching versions from website table...
+[2025-09-19 18:50:51] [ERROR] === Task failed at 9/19/2025 6:50:51 PM: No such host is known. (hzansbrender.com:443) ===
+[2025-09-19 18:50:51] [INFO] Using sender email: user
+[2025-09-19 18:50:52] [INFO] Email sent! Message ID: 199642c59b5450f0
+[2025-09-19 18:50:52] [INFO] Email sent successfully.
+[2025-09-19 20:19:16] [INFO] === Task started at 9/19/2025 8:19:16 PM ===
+[2025-09-19 20:19:16] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-19 20:19:16] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-19 20:19:16] [INFO] Fetching versions from website table...
+[2025-09-19 20:19:16] [ERROR] === Task failed at 9/19/2025 8:19:16 PM: No such host is known. (hzansbrender.com:443) ===
+[2025-09-19 20:19:17] [INFO] Email sent successfully using SMTP client.
+[2025-09-19 20:19:17] [INFO] Email sent successfully.
+[2025-09-20 00:36:54] [INFO] === Task started at 9/20/2025 12:36:54 AM ===
+[2025-09-20 00:36:54] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-20 00:36:54] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-20 00:36:54] [INFO] Fetching versions from website table...
+[2025-09-20 00:36:54] [ERROR] === Task failed at 9/20/2025 12:36:54 AM: No such host is known. (hzansbrender.com:443) ===
+[2025-09-20 00:36:55] [INFO] Email sent successfully using SMTP client.
+[2025-09-20 00:36:55] [INFO] Email sent successfully.
+[2025-09-20 00:40:05] [INFO] === Task started at 9/20/2025 12:40:05 AM ===
+[2025-09-20 00:40:05] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-20 00:40:05] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-20 00:40:05] [INFO] Fetching versions from website table...
+[2025-09-20 00:40:05] [ERROR] === Task failed at 9/20/2025 12:40:05 AM: No such host is known. (hzansbrender.com:443) ===
+[2025-09-20 00:40:06] [INFO] Email sent successfully using SMTP client.
+[2025-09-20 00:40:06] [INFO] Email sent successfully.
+[2025-09-20 00:40:48] [INFO] === Task started at 9/20/2025 12:40:48 AM ===
+[2025-09-20 00:40:48] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-20 00:40:48] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-20 00:40:48] [INFO] Fetching versions from website table...
+[2025-09-20 00:40:48] [ERROR] === Task failed at 9/20/2025 12:40:48 AM: No such host is known. (hzansbrender.com:443) ===
+[2025-09-20 00:40:48] [INFO] Email sent successfully using SMTP client.
+[2025-09-20 00:40:49] [INFO] Email sent successfully.
+[2025-09-20 00:45:34] [INFO] === Task started at 9/20/2025 12:45:34 AM ===
+[2025-09-20 00:45:34] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-20 00:45:34] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-20 00:45:34] [INFO] Fetching versions from website table...
+[2025-09-20 00:45:34] [ERROR] === Task failed at 9/20/2025 12:45:34 AM: No such host is known. (hzansbrender.com:443) ===
+[2025-09-20 00:45:35] [INFO] Email sent successfully using SMTP client.
+[2025-09-20 00:45:35] [INFO] Email sent successfully.
+[2025-09-20 00:47:55] [INFO] === Task started at 9/20/2025 12:47:55 AM ===
+[2025-09-20 00:47:55] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-20 00:47:55] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-20 00:47:55] [INFO] Fetching versions from website table...
+[2025-09-20 00:47:55] [ERROR] === Task failed at 9/20/2025 12:47:55 AM: No such host is known. (hzansbrender.com:443) ===
+[2025-09-20 00:47:56] [INFO] Email sent successfully using SMTP client.
+[2025-09-20 00:47:56] [INFO] Email sent successfully.
+[2025-09-20 00:51:43] [INFO] === Task started at 9/20/2025 12:51:43 AM ===
+[2025-09-20 00:51:43] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-20 00:51:43] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-20 00:51:43] [INFO] Fetching versions from website table...
+[2025-09-20 00:51:43] [ERROR] === Task failed at 9/20/2025 12:51:43 AM: No such host is known. (hzansbrender.com:443) ===
+[2025-09-20 00:51:44] [INFO] Email sent successfully using SMTP client.
+[2025-09-20 00:51:44] [INFO] Email sent successfully.
+[2025-09-20 00:53:54] [INFO] === Task started at 9/20/2025 12:53:54 AM ===
+[2025-09-20 00:53:54] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-20 00:53:54] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-20 00:53:54] [INFO] Fetching versions from website table...
+[2025-09-20 00:53:54] [ERROR] === Task failed at 9/20/2025 12:53:54 AM: No such host is known. (hzansbrender.com:443) ===
+[2025-09-20 00:53:55] [INFO] Email sent successfully using SMTP client.
+[2025-09-20 00:53:55] [INFO] Email sent successfully.
+[2025-09-20 00:57:01] [INFO] === Task started at 9/20/2025 12:57:01 AM ===
+[2025-09-20 00:57:01] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-20 00:57:01] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-20 00:57:01] [INFO] Fetching versions from website table...
+[2025-09-20 00:57:01] [ERROR] === Task failed at 9/20/2025 12:57:01 AM: No such host is known. (hzansbrender.com:443) ===
+[2025-09-20 00:57:02] [INFO] Email sent successfully using SMTP client.
+[2025-09-20 00:57:02] [INFO] Email sent successfully.
+[2025-09-20 01:01:01] [INFO] === Task started at 9/20/2025 1:01:01 AM ===
+[2025-09-20 01:01:01] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-20 01:01:01] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-20 01:01:01] [INFO] Fetching versions from website table...
+[2025-09-20 01:01:01] [ERROR] === Task failed at 9/20/2025 1:01:01 AM: No such host is known. (hzansbrender.com:443) ===
+[2025-09-20 01:01:02] [INFO] Email sent successfully using SMTP client.
+[2025-09-20 01:01:02] [INFO] Email sent successfully.
+[2025-09-20 01:13:01] [INFO] === Task started at 9/20/2025 1:13:01 AM ===
+[2025-09-20 01:13:02] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-20 01:13:02] [ERROR] === Task failed at 9/20/2025 1:13:02 AM: Could not find file 'C:\Users\admin\Desktop\8.0\CsharpOneDrive\OneDriveUltimate\AllVersionsz.json'. ===
+[2025-09-20 01:13:03] [INFO] Email sent successfully using SMTP client.
+[2025-09-20 01:13:03] [INFO] Email sent successfully.

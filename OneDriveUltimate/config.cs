@@ -62,7 +62,7 @@ public static class Config
 
         SenderEmailAddress = config.GetValue<string>("AppSettings:senderEmailAddress","apps@tlprojectautomation.com");
 
-        RecipientsEmailAddresses = config.GetSection("AppSettings:recipientsEmailAddresses").Get<List<string>>() ?? new List<string> { "","","" };
+        RecipientsEmailAddresses = config.GetSection("AppSettings:recipientsEmailAddresses").Get<List<string>>() ?? new List<string> { "ahmad.radwan@threatlocker.com"};
 
     }
 }

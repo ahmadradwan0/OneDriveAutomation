@@ -215,9 +215,7 @@ class Program
         try
         {
             // # uncomment the line below to fill json with all versions from website table only (testing only)
-            //await TestCase_FillJsonWithWebSiteVersionsOnly();
-
-            Utils.EmailSender();
+            await TestCase_FillJsonWithWebSiteVersionsOnly();
 
             // # uncomment the line below to fill json with all versions from website table and hidden versions included (testing only)
             //await TestCase_FillJsonWithWebSiteAndHiddenVersion();
@@ -229,13 +227,14 @@ class Program
             //await TestCase_CheckIfInstallManagerWorks();
 
             // This main line to run the full production workflow
-            await Production2_0();
+            //await Production2_0();
 
             Utils.Log($"=== Task completed successfully at {DateTime.Now} ===");
         }
         catch (Exception ex)
         {
             Utils.Log($"=== Task failed at {DateTime.Now}: {ex.Message} ===", "ERROR");
+            Utils.EmailSender(ex.Message);
             Environment.Exit(1); // Exit with error code
         }
 

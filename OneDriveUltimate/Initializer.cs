@@ -114,6 +114,8 @@ public class Initializer
     {
         try
         {
+            // it will check if the directory exists before trying to delete it to avoid exceptions
+            // Config.DownloadPath is the path to the download directory specified in the config class 
             if (Directory.Exists(Config.DownloadPath))
             {
                 Directory.Delete(Config.DownloadPath, true);

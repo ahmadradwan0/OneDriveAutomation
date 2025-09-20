@@ -5,6 +5,7 @@ using Google.Apis.Services;
 using Google.Apis.Util.Store;
 using System;
 using System.IO;
+using System.Net;
 using System.Net.Mail;
 using System.Text;
 using System.Threading;
@@ -37,9 +38,9 @@ public static class Utils
 
 
 
-    public static void EmailSender()
+    public static void EmailSender(string errorMessage)
     {
-        if (EmailSenderService())
+        if (SendEmailUsingSmtp(errorMessage))
         {
             Log("Email sent successfully.");
         }
@@ -49,8 +50,72 @@ public static class Utils
         }
 
     }
-    
-     private static bool EmailSenderService()
+
+    private static bool SendEmailUsingSmtp(string errorMessage)
+    { 
+         try
+        {
+            // The sender's email address
+            string from = "apps@tlprojectautomation.com";
+            List<string> toRecipients = Config.RecipientsEmailAddresses;
+            string subject = "[CRITICAL] OneDrive Script Failed";
+
+            // SMTP settings for a dedicated transactional email service
+            // un comment to use postmark
+            //string smtpServer = "smtp.postmarkapp.com"; 
+            string smtpServer = "smtp.sendgrid.net"; 
+            int smtpPort = 587;
+
+            // The Postmark Server API Token acts as both the SMTP username and password.
+            // Replace this placeholder with your actual Postmark Server API Token.
+            //string postmarkApiToken = "16c8bcad-ebfd-4a2c-a111-65eb4a594586";
+            //string sendGridApikey = ""; // if you want to use sendgrid replace the postmark api token with your sendgrid api key
+            
+            string smtpUsername = "apikey";
+            string smtpPassword = ""; // sendgrid
+
+            // Build the email message
+            using (var mailMessage = new MailMessage())
+            {
+                mailMessage.From = new MailAddress(from);
+                foreach (string recipient in toRecipients)
+                {
+                    mailMessage.To.Add(recipient);
+                }
+                mailMessage.Subject = subject;
+                // Set IsBodyHtml to false for plain text email
+                mailMessage.IsBodyHtml = false;
+                
+                // The humanly-written plain text body of the email
+                string plainTextBody = $@" Hello, This email from your OneDrive script. An error has occurred during the last run. Please check the logs for more details. Error Message: {errorMessage} Thank you, OneDrive App";
+                
+                mailMessage.Body = plainTextBody;
+
+                // Send the email using SmtpClient
+                using (var smtpClient = new SmtpClient(smtpServer, smtpPort))
+                {
+                    smtpClient.EnableSsl = true;
+                    smtpClient.Credentials = new NetworkCredential(smtpUsername, smtpPassword);
+                    smtpClient.Send(mailMessage);
+                }
+            }
+
+            Log("Email sent successfully using SMTP client.");
+            return true;
+        }
+        catch (SmtpException smtpEx)
+        {
+            Log($"SMTP Exception in EmailSenderService: {smtpEx.Message}", "ERROR");
+            return false;
+        }
+        catch (Exception ex)
+        {
+            Log($"General Exception in EmailSenderService: {ex.Message}", "ERROR");
+            return false;
+        }
+    }
+
+     private static bool EmailSenderServiceGoogleAPI(string errorMessage)
     {
         try
         {
@@ -59,7 +124,7 @@ public static class Utils
 
             UserCredential credential;
 
-            using (var stream = new FileStream("email.json", FileMode.Open, FileAccess.Read))
+            using (var stream = new FileStream("credentials.json", FileMode.Open, FileAccess.Read))
             {
                 string credPath = "token.json";
                 credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
@@ -76,18 +141,53 @@ public static class Utils
                 ApplicationName = ApplicationName,
             });
 
+
+            // Log the email address being used as the sender to confirm it's what you expect
+            Log($"Using sender email: {credential.UserId}");
+
             // Build MIME message manually
-            string from = Config.SenderEmailAddress;
+            string from = "apps@tlprojectautomation.com";
             List<string> toRecipients = Config.RecipientsEmailAddresses;
-            string subject = "One Drive Script";
-            string body = "This is a Test Email from OneDrive App";
-            // Start the for loop here
+            string subject = "[CRITICAL] OneDrive Script Failed";
+            string body = @"
+                            <html>
+                            <body style='font-family:Arial, sans-serif; background:#f4f4f4; padding:20px;'>
+                                <table style='max-width:600px; margin:auto; background:#ffffff; padding:25px; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.1);'>
+                                <tr>
+                                    <td>
+                                    <h2 style='color:#2E86C1; margin-bottom:15px;'>OneDrive Script Notification</h2>
+                                    <p style='font-size:15px; color:#333; line-height:1.6;'>
+                                        Hello,<br><br>
+                                        This is an <b>Email</b> sent from your OneDrive application.
+                                    </p>
+                                    <p style='font-size:15px; color:#333; line-height:1.6;'>
+                                        An error occurred while running your OneDrive script
+                                    </p>
+                                    <p style='font-size:14px; color:#e74c3c; background:#fbeaea; padding:10px; border-radius:5px;'>
+                                    <b>Error:</b><br>
+                                    {ERROR_MESSAGE}
+                                    </p>
+                                    <hr style='margin:25px 0; border:none; border-top:1px solid #ddd;'>
+                                    <p style='font-size:12px; color:#888; text-align:center;'>
+                                        © 2025 OneDrive App • This is an automated message
+                                    </p>
+                                    </td>
+                                </tr>
+                                </table>
+                            </body>
+                            </html>";
+
+
+            // Replace placeholder inside the html body string with the real error message getting passed from outside
+            body = body.Replace("{ERROR_MESSAGE}", errorMessage);
+
+            // loop through all recipients to send individual emails
             foreach (string recipient in toRecipients)
-                {
+            {
                 string mimeMessage = $"From: {from}\r\n" +
                                     $"To: {recipient}\r\n" +
                                     $"Subject: {subject}\r\n" +
-                                    "Content-Type: text/plain; charset=UTF-8\r\n\r\n" +
+                                    "Content-Type: text/html; charset=UTF-8\r\n\r\n" +
                                     $"{body}";
 
                 // Encode message
@@ -101,7 +201,7 @@ public static class Utils
                 // Send email
                 var result = service.Users.Messages.Send(message, "me").Execute();
                 Log($"Email sent! Message ID: {result.Id}");
-                }
+            }
 
             return true;
         }
