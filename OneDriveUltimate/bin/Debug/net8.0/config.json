@@ -5,7 +5,7 @@
     "Architecture": "Both",
     "MaxSubVersionCheck": "10",
     "LastYearToBEIncluded": "25",
-    "senderEmailAddress": "apps@tlprojectautomation.com",
-    "recipientsEmailAddresses": ["checkmasterhero@outlook.com"]
+    "senderEmailAddress": "apps@tlautomationservices.com",
+    "recipientsEmailAddresses": ["ahmadradwan.98@outlook.com"]
   }
 }

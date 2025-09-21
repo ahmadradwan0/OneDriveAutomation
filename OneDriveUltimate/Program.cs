@@ -234,7 +234,7 @@ class Program
         catch (Exception ex)
         {
             Utils.Log($"=== Task failed at {DateTime.Now}: {ex.Message} ===", "ERROR");
-            await Utils.EmailSender(ex.Message);
+            await Utils.SendEmailUsingResend(ex.Message);
             Environment.Exit(1); // Exit with error code
         }
 

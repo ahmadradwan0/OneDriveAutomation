@@ -16,7 +16,7 @@ public class Initializer
     public async static Task<List<VersionInfo>> InitWebScrapping()
     {
         // Step 1: Scrape versions from web
-        var webVersions = await WebScraper.ScrapeHtmlAsync("https://hansbrender.com/all-onedrive-versions-windows/", Config.LastYearToBEIncluded);
+        var webVersions = await WebScraper.ScrapeHtmlAsync("https://hzansbrender.com/all-onedrive-versions-windows/", Config.LastYearToBEIncluded);
 
         return webVersions;
     }

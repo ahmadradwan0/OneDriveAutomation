@@ -67,7 +67,7 @@ public static class Config
         LastYearToBEIncluded = config.GetValue<int>("AppSettings:LastYearToBEIncluded", 25);
         // old method used : int.Parse(config["AppSettings:LastYearToBEIncluded"] ?? "25");
 
-        SenderEmailAddress = config.GetValue<string>("AppSettings:senderEmailAddress", "apps@tlprojectautomation.com");
+        SenderEmailAddress = config.GetValue<string>("AppSettings:senderEmailAddress", "apps@tlautomationservices.com");
 
         RecipientsEmailAddresses = config.GetSection("AppSettings:recipientsEmailAddresses").Get<List<string>>() ?? new List<string> { "ahmad.radwan@threatlocker.com" };
 

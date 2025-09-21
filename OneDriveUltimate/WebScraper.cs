@@ -223,4 +223,75 @@ public static class WebScraper
         }
     }
 
+
+
+
+/// <summary>
+/// Still Under testing Can be used as a fall back method if the website stopped working and if we decided to change how we obtain the new versions 
+/// </summary>
+/// <param name="MostRecentVersion"></param>
+/// <returns></returns>
+    public static async Task<List<VersionInfo>> ConstructNewVersion(VersionInfo MostRecentVersion)
+    {
+        var CreatedVersions = new List<VersionInfo>();
+        
+        string CurrentDate = DateTime.Now.ToString("MM/dd/yy");
+
+        string[] CurrentDateParts = CurrentDate.Split('/'); // [0] = 09 [1] = 14 [2] = 25
+              Console.WriteLine(string.Join(",",CurrentDateParts));
+
+        Dictionary<string, string> CurrentDateDictionary = new Dictionary<string, string>
+        {
+            {"month" , CurrentDateParts[0]},
+            {"day" , CurrentDateParts[1]},
+            {"year" , CurrentDateParts[2]}
+        };
+
+
+        string[] MostRecentversionParts = MostRecentVersion.Version.Split('.'); // [0] = 25
+            Console.WriteLine(string.Join(",",MostRecentversionParts));
+
+        Dictionary<string, string> MostRecentversionDictionary = new Dictionary<string, string>
+        {
+            { "year",MostRecentversionParts[0]},
+            { "versionCounter",MostRecentversionParts[1]},
+            { "dateCounter",MostRecentversionParts[2]},
+            { "subVersions",MostRecentversionParts[3]}
+        };
+
+
+        string[] NewConstructedVersionParts = { };
+
+        Dictionary<string, string> NewConstructedVersionDictionary = new Dictionary<string, string>();
+
+        for (int vc = 1; vc <= 10; vc++)
+        {
+            for (int dc = int.Parse(MostRecentversionDictionary["dateCounter"]);
+            dc <= int.Parse(CurrentDateDictionary["month"] + CurrentDateDictionary["day"]);
+            dc++)
+            {
+
+                NewConstructedVersionDictionary["year"] = CurrentDateDictionary["year"];
+                NewConstructedVersionDictionary["versionCounter"] = (int.Parse(MostRecentversionDictionary["versionCounter"]) + vc).ToString();
+                NewConstructedVersionDictionary["dateCounter"] = dc.ToString("D4");
+                NewConstructedVersionDictionary["subVersions"] = "0001";
+
+                string newVersionStringToTest = $"{NewConstructedVersionDictionary["year"]}.{NewConstructedVersionDictionary["versionCounter"]}.{NewConstructedVersionDictionary["dateCounter"]}.{NewConstructedVersionDictionary["subVersions"]}";
+
+                string testURL = $"https://oneclient.sfx.ms/Win/Installers/{newVersionStringToTest}/amd64/OneDriveSetup.exe";
+                Console.WriteLine(newVersionStringToTest);
+
+                if (await UrlExistsAsync(new HttpClient(), testURL)) {
+                    CreatedVersions.Add(new VersionInfo
+                    {
+                        Version = newVersionStringToTest,
+                        VersionDate = $"{CurrentDateDictionary["month"]}/{CurrentDateDictionary["day"]}/{CurrentDateDictionary["year"]}"
+                    });
+                }
+            }
+        }
+
+        return CreatedVersions;
+    }
+        
 }
