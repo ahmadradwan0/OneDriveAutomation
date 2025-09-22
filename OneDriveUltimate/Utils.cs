@@ -25,7 +25,7 @@ public static class Utils
     {
         // Use the static Create method to initialize the client.
         // This is the correct way for a non-DI application.
-        string apiToken = "";
+        string apiToken = "re_TqBNSRA5_HC2DyuBsdtCeRp1AW768Mew7";
         Console.WriteLine($"API Token being used: {apiToken}");
         _resendClient = ResendClient.Create(apiToken);
     }
@@ -54,29 +54,47 @@ public static class Utils
         {
             // The sender email must be a verified domain in your Resend account
             string from = Config.SenderEmailAddress;
-            string subject = "OneDrive Script Failed";
+            string subject = "[Critical] OneDrive Script Failed";
 
-            // Build the email message
-            var emailMessage = new EmailMessage
+            foreach (var recipientt in Config.RecipientsEmailAddresses)
             {
-                From = from,
-                To = { Config.RecipientsEmailAddresses.First() },
-                Subject = subject,
-                HtmlBody = $@"
-                    <h1>Hello,</h1>
-                    <p>This email is from your OneDrive script.</p>
-                    <p>An error has occurred during the last run.</p>
-                    <p>Please check the logs for more details.</p>
-                    <p>Error Message:</p>
-                    <p>{errorMessage}</p>
-                    <p>Thank you,</p>
-                    <p>OneDrive App</p>"
-            };
+                // Build the email message
+                var emailMessage = new EmailMessage
+                {
+                    From = from,
+                    To = { recipientt },
+                    Subject = subject,
 
-            // Use the initialized Resend client
-            var emailResponse = await _resendClient.EmailSendAsync(emailMessage);
+                    HtmlBody = $@"
+                    <div style=""font-family:Segoe UI, sans-serif; max-width:600px; margin:20px auto; padding:20px; border:1px solid #e0e0e0; border-radius:8px; background-color:#fafafa;"">
+                        <h2 style=""color:#2c3e50;"">🚨 OneDrive Script Alert</h2>
 
-            Log($"Email sent successfully with Resend ID: {emailResponse.Success}");
+                        <p style=""font-size:16px;"">An error occurred during the last run of your OneDrive script.</p>
+
+                        <div style=""margin:20px 0; padding:15px; background-color:#ffe6e6; border-left:5px solid #e74c3c;"">
+                            <strong style=""color:#c0392b;"">Error Details:</strong>
+                            <pre style=""white-space:pre-wrap; word-wrap:break-word; color:#333;"">
+                An error occurred at: {DateTime.Now:yyyy-MM-dd HH:mm:ss}
+                Machine Name: {Environment.MachineName}
+                User: {Environment.UserName}
+
+                Exception:
+                {errorMessage}
+                            </pre>
+                        </div>
+
+                        <p style=""color:#555;"">Please check the logs for more details.</p>
+
+                        <p style=""color:#999;"">– OneDrive App</p>
+                    </div>"
+                };
+
+                // Use the initialized Resend client
+                var emailResponse = await _resendClient.EmailSendAsync(emailMessage);
+
+                Log($"Email sent successfully with Resend ID: {emailResponse.Success}");
+                }
+
             return true;
         }
         catch (Exception ex)

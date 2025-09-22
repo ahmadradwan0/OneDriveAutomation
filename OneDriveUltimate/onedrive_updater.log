@@ -2785,3 +2785,72 @@
 [2025-09-21 04:58:32] [INFO] Fetching versions from website table...
 [2025-09-21 04:58:32] [ERROR] === Task failed at 9/21/2025 4:58:32 AM: No such host is known. (hzansbrender.com:443) ===
 [2025-09-21 04:58:32] [INFO] Email sent successfully with Resend ID: True
+[2025-09-21 17:02:04] [INFO] === Task started at 9/21/2025 5:02:03 PM ===
+[2025-09-21 17:02:04] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-21 17:02:04] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-21 17:02:05] [INFO] Fetching versions from website table...
+[2025-09-21 17:02:05] [ERROR] === Task failed at 9/21/2025 5:02:05 PM: No such host is known. (hzansbrender.com:443) ===
+[2025-09-21 17:02:05] [ERROR] Error in EmailSenderService: API key is invalid
+[2025-09-21 17:02:39] [INFO] === Task started at 9/21/2025 5:02:39 PM ===
+[2025-09-21 17:02:39] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-21 17:02:39] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-21 17:02:39] [INFO] Fetching versions from website table...
+[2025-09-21 17:02:39] [ERROR] === Task failed at 9/21/2025 5:02:39 PM: No such host is known. (hzansbrender.com:443) ===
+[2025-09-21 17:02:39] [INFO] Email sent successfully with Resend ID: True
+[2025-09-21 17:04:37] [INFO] === Task started at 9/21/2025 5:04:37 PM ===
+[2025-09-21 17:04:37] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-21 17:04:37] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-21 17:04:37] [INFO] Fetching versions from website table...
+[2025-09-21 17:04:37] [ERROR] === Task failed at 9/21/2025 5:04:37 PM: No such host is known. (hzansbrender.com:443) ===
+[2025-09-21 17:04:38] [INFO] Email sent successfully with Resend ID: True
+[2025-09-21 17:05:16] [INFO] === Task started at 9/21/2025 5:05:16 PM ===
+[2025-09-21 17:05:16] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-21 17:05:16] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-21 17:05:16] [INFO] Fetching versions from website table...
+[2025-09-21 17:05:16] [ERROR] === Task failed at 9/21/2025 5:05:16 PM: No such host is known. (hzansbrender.com:443) ===
+[2025-09-21 17:05:17] [INFO] Email sent successfully with Resend ID: True
+[2025-09-21 17:07:55] [INFO] === Task started at 9/21/2025 5:07:55 PM ===
+[2025-09-21 17:07:55] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-21 17:07:55] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-21 17:07:55] [INFO] Fetching versions from website table...
+[2025-09-21 17:07:55] [ERROR] === Task failed at 9/21/2025 5:07:55 PM: No such host is known. (hzansbrender.com:443) ===
+[2025-09-21 17:07:55] [INFO] Email sent successfully with Resend ID: True
+[2025-09-21 17:36:47] [INFO] === Task started at 9/21/2025 5:36:47 PM ===
+[2025-09-21 17:36:48] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-21 17:36:48] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-21 17:36:48] [INFO] Fetching versions from website table...
+[2025-09-21 17:36:48] [ERROR] === Task failed at 9/21/2025 5:36:48 PM: No such host is known. (hzansbrender.com:443) ===
+[2025-09-21 17:36:48] [INFO] Email sent successfully with Resend ID: True
+[2025-09-21 18:45:05] [INFO] === Task started at 9/21/2025 6:45:05 PM ===
+[2025-09-21 18:45:05] [INFO] TestCase :::: Starting Test Case to fill json with all versions from website table...
+[2025-09-21 18:45:05] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-21 18:45:05] [INFO] Fetching versions from website table...
+[2025-09-21 18:45:05] [ERROR] === Task failed at 9/21/2025 6:45:05 PM: The 'hzttps' scheme is not supported. ===
+[2025-09-21 18:45:06] [INFO] Email sent successfully with Resend ID: True
+[2025-09-21 18:45:06] [INFO] Email sent successfully with Resend ID: True
+[2025-09-21 21:08:39] [INFO] === Task started at 9/21/2025 9:08:39 PM ===
+[2025-09-21 21:08:39] [INFO] TestCase :::: Starting Test Case to check if Download Manager works...
+[2025-09-21 21:08:39] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-21 21:08:39] [INFO] Fetching versions from website table...
+[2025-09-21 21:08:39] [INFO] All versions fetched since The year :    25
+[2025-09-21 21:08:39] [INFO] Number Of versions From Website Table: 168
+[2025-09-21 21:08:39] [INFO] Number Of New Versions To Be Downloaded: 1
+[2025-09-21 21:08:39] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.164.0824.0003/amd64/OneDriveSetup.exe...
+[2025-09-21 21:08:41] [INFO] Saved to C:\Users\admin0\Downloads\OneDriveUpdaterVersions\25.164.0824.0003\OneDriveSetup_x64.exe
+[2025-09-21 21:08:41] [INFO] Downloading https://oneclient.sfx.ms/Win/Installers/25.164.0824.0003/OneDriveSetup.exe...
+[2025-09-21 21:08:42] [INFO] Saved to C:\Users\admin0\Downloads\OneDriveUpdaterVersions\25.164.0824.0003\OneDriveSetup_x86.exe
+[2025-09-21 21:08:42] [INFO] Successfully prepared version 25.164.0824.0003 with 2 installer(s).
+[2025-09-21 21:08:42] [INFO] Number Of New Versions That has Been Successfully Downloaded: 1
+[2025-09-21 21:08:42] [INFO] === Task completed successfully at 9/21/2025 9:08:42 PM ===
+[2025-09-21 21:24:35] [INFO] === Task started at 9/21/2025 9:24:35 PM ===
+[2025-09-21 21:24:36] [INFO] TestCase :::: Starting Test Case to check if Download Manager works...
+[2025-09-21 21:24:36] [INFO] Number Of versions in Local Json File :::    168
+[2025-09-21 21:24:36] [INFO] Fetching versions from website table...
+[2025-09-21 21:24:36] [INFO] All versions fetched since The year :    25
+[2025-09-21 21:24:36] [INFO] Number Of versions From Website Table: 168
+[2025-09-21 21:24:36] [INFO] Number Of New Versions To Be Downloaded: 1
+[2025-09-21 21:24:36] [INFO] C:\Users\admin0\Downloads\OneDriveUpdaterVersions\25.164.0824.0003\OneDriveSetup_x64.exe already exists at C:\Users\admin0\Downloads\OneDriveUpdaterVersions\25.164.0824.0003\OneDriveSetup_x64.exe, skipping download.
+[2025-09-21 21:24:36] [INFO] C:\Users\admin0\Downloads\OneDriveUpdaterVersions\25.164.0824.0003\OneDriveSetup_x86.exe already exists at C:\Users\admin0\Downloads\OneDriveUpdaterVersions\25.164.0824.0003\OneDriveSetup_x86.exe, skipping download.
+[2025-09-21 21:24:36] [INFO] Successfully prepared version 25.164.0824.0003 with 2 installer(s).
+[2025-09-21 21:24:36] [INFO] Number Of New Versions That has Been Successfully Downloaded: 1
+[2025-09-21 21:24:36] [INFO] === Task completed successfully at 9/21/2025 9:24:36 PM ===

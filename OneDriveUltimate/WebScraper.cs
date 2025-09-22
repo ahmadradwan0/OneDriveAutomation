@@ -233,6 +233,7 @@ public static class WebScraper
 /// <returns></returns>
     public static async Task<List<VersionInfo>> ConstructNewVersion(VersionInfo MostRecentVersion)
     {
+        // empty list to store the new successfully created versions 
         var CreatedVersions = new List<VersionInfo>();
         
         string CurrentDate = DateTime.Now.ToString("MM/dd/yy");

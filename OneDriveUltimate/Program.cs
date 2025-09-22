@@ -215,13 +215,13 @@ class Program
         try
         {
             // # uncomment the line below to fill json with all versions from website table only (testing only)
-            await TestCase_FillJsonWithWebSiteVersionsOnly();
+            //await TestCase_FillJsonWithWebSiteVersionsOnly();
 
             // # uncomment the line below to fill json with all versions from website table and hidden versions included (testing only)
             //await TestCase_FillJsonWithWebSiteAndHiddenVersion();
 
             // # uncomment the line below to test if download manager works (testing only)
-            //await TestCase_CheckIfDownloadManagerWorks();
+            await TestCase_CheckIfDownloadManagerWorks();
 
             // # uncomment the line below to test if Install manager works (testing only)
             //await TestCase_CheckIfInstallManagerWorks();
@@ -234,7 +234,7 @@ class Program
         catch (Exception ex)
         {
             Utils.Log($"=== Task failed at {DateTime.Now}: {ex.Message} ===", "ERROR");
-            await Utils.SendEmailUsingResend(ex.Message);
+            await Utils.SendEmailUsingResend(ex.ToString());
             Environment.Exit(1); // Exit with error code
         }
 
