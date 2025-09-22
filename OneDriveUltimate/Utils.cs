@@ -13,10 +13,7 @@ using Resend;
 /// </summary>
 public static class Utils
 {
-    /// <summary>
-    /// method to log all the changes on the console and in a log file saved besids the EXE file 
-    /// </summary>
-    /// 
+
 
     private static readonly IResend _resendClient;
 
@@ -30,7 +27,9 @@ public static class Utils
         _resendClient = ResendClient.Create(apiToken);
     }
 
-
+    /// <summary>
+    /// Logs a message to the console and a log file with a timestamp and log level.
+    /// </summary>
     public static void Log(string message, string level = "INFO")
     {
         string logEntry = $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] [{level}] {message}";
@@ -48,7 +47,12 @@ public static class Utils
         }
     }
 
-   public static async Task<bool> SendEmailUsingResend(string errorMessage)
+    /// <summary>
+    /// Sends an email using the Resend service.
+    /// </summary>
+    /// <param name="errorMessage"></param>
+    /// <returns></returns>
+    public static async Task<bool> SendEmailUsingResend(string errorMessage)
     {
         try
         {
@@ -93,7 +97,7 @@ public static class Utils
                 var emailResponse = await _resendClient.EmailSendAsync(emailMessage);
 
                 Log($"Email sent successfully with Resend ID: {emailResponse.Success}");
-                }
+            }
 
             return true;
         }

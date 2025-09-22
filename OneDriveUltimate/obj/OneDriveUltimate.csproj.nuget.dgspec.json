@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin0\\Desktop\\Newest\\newest\\CsharpOneDrive\\OneDriveUltimate\\OneDriveUltimate.csproj": {}
+    "C:\\Users\\admin\\Desktop\\8.0\\CsharpOneDrive\\OneDriveUltimate\\OneDriveUltimate.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin0\\Desktop\\Newest\\newest\\CsharpOneDrive\\OneDriveUltimate\\OneDriveUltimate.csproj": {
+    "C:\\Users\\admin\\Desktop\\8.0\\CsharpOneDrive\\OneDriveUltimate\\OneDriveUltimate.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin0\\Desktop\\Newest\\newest\\CsharpOneDrive\\OneDriveUltimate\\OneDriveUltimate.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Desktop\\8.0\\CsharpOneDrive\\OneDriveUltimate\\OneDriveUltimate.csproj",
         "projectName": "OneDriveUltimate",
-        "projectPath": "C:\\Users\\admin0\\Desktop\\Newest\\newest\\CsharpOneDrive\\OneDriveUltimate\\OneDriveUltimate.csproj",
-        "packagesPath": "C:\\Users\\admin0\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin0\\Desktop\\Newest\\newest\\CsharpOneDrive\\OneDriveUltimate\\obj\\",
+        "projectPath": "C:\\Users\\admin\\Desktop\\8.0\\CsharpOneDrive\\OneDriveUltimate\\OneDriveUltimate.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\admin\\Desktop\\8.0\\CsharpOneDrive\\OneDriveUltimate\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\admin0\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"

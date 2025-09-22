@@ -2,21 +2,22 @@ using System.Collections.Generic;
 using HtmlAgilityPack;
 using System.Collections.Concurrent;
 using System.Net;
+using System.Globalization;
 
 public static class WebScraper
 {
-        /// <summary>
-        /// Asynchronously scrapes version information from an HTML table on a given URL.
-        /// </summary>
-        /// <param name="url">The URL of the webpage to scrape.</param>
-        /// <param name="LastYearIncluded">The last two-digit year (e.g., 20 for 2020) to include in the scrape. Defaults to 17.</param>
-        /// <returns>A list of <see cref="VersionInfo"/> objects found on the webpage.</returns>
-        /// <remarks>
-        /// This method fetches the HTML content, parses it using <see cref="HtmlAgilityPack.HtmlDocument"/>, and
-        /// extracts version numbers and dates from an HTML table. It stops scraping once it
-        /// encounters a version from a year older than the specified <paramref name="LastYearIncluded"/>,
-        /// optimizing the process by not fetching irrelevant data.
-        /// </remarks>
+    /// <summary>
+    /// Asynchronously scrapes version information from an HTML table on a given URL.
+    /// </summary>
+    /// <param name="url">The URL of the webpage to scrape.</param>
+    /// <param name="LastYearIncluded">The last two-digit year (e.g., 20 for 2020) to include in the scrape. Defaults to 17.</param>
+    /// <returns>A list of <see cref="VersionInfo"/> objects found on the webpage.</returns>
+    /// <remarks>
+    /// This method fetches the HTML content, parses it using <see cref="HtmlAgilityPack.HtmlDocument"/>, and
+    /// extracts version numbers and dates from an HTML table. It stops scraping once it
+    /// encounters a version from a year older than the specified <paramref name="LastYearIncluded"/>,
+    /// optimizing the process by not fetching irrelevant data.
+    /// </remarks>
     public static async Task<List<VersionInfo>> ScrapeHtmlAsync(string url, int? LastYearIncluded = 25)
     {
         Utils.Log("Fetching versions from website table...");
@@ -32,7 +33,7 @@ public static class WebScraper
         // the doc variable is responsible for parsing the html string and allow us to navigate through the HTML elements (DOM)
         var doc = new HtmlDocument();
         doc.LoadHtml(html);
-        
+
         // Select rows from the table and extract version info
         var rows = doc.DocumentNode.SelectNodes("//table//tr");
         if (rows != null)
@@ -72,7 +73,7 @@ public static class WebScraper
     /// Asynchronously checks for "hidden" OneDrive versions by generating potential version numbers
     /// uncomment it if needed
     /// </summary>
-    
+
     /*public static async Task<List<VersionInfo>> GetListOfHiddenVersions()
     {
         Utils.Log("function");
@@ -136,7 +137,7 @@ public static class WebScraper
     /// </summary>
     public static async Task<List<VersionInfo>> GetListOfHiddenVersionsParallel(List<VersionInfo> AllVersions)
     {
-        
+
         //var AllVersions = StorageManager.GetStoredVersions(Config.VersionFile);
         int hiddenItemsSearchLimit = Config.MaxSubVersionCheck;
 
@@ -226,20 +227,20 @@ public static class WebScraper
 
 
 
-/// <summary>
-/// Still Under testing Can be used as a fall back method if the website stopped working and if we decided to change how we obtain the new versions 
-/// </summary>
-/// <param name="MostRecentVersion"></param>
-/// <returns></returns>
-    public static async Task<List<VersionInfo>> ConstructNewVersion(VersionInfo MostRecentVersion)
+    /// <summary>
+    /// Still Under testing Can be used as a fall back method if the website stopped working and if we decided to change how we obtain the new versions 
+    /// </summary>
+    /// <param name="MostRecentVersion"></param>
+    /// <returns></returns>
+    public static async Task<List<VersionInfo>> ConstructNewVersionsOnTheFlyNormal(VersionInfo MostRecentVersion)
     {
         // empty list to store the new successfully created versions 
         var CreatedVersions = new List<VersionInfo>();
-        
+
         string CurrentDate = DateTime.Now.ToString("MM/dd/yy");
 
         string[] CurrentDateParts = CurrentDate.Split('/'); // [0] = 09 [1] = 14 [2] = 25
-              Console.WriteLine(string.Join(",",CurrentDateParts));
+        Console.WriteLine(string.Join(",", CurrentDateParts));
 
         Dictionary<string, string> CurrentDateDictionary = new Dictionary<string, string>
         {
@@ -250,7 +251,7 @@ public static class WebScraper
 
 
         string[] MostRecentversionParts = MostRecentVersion.Version.Split('.'); // [0] = 25
-            Console.WriteLine(string.Join(",",MostRecentversionParts));
+        Console.WriteLine(string.Join(",", MostRecentversionParts));
 
         Dictionary<string, string> MostRecentversionDictionary = new Dictionary<string, string>
         {
@@ -268,7 +269,7 @@ public static class WebScraper
         for (int vc = 1; vc <= 10; vc++)
         {
             for (int dc = int.Parse(MostRecentversionDictionary["dateCounter"]);
-            dc <= int.Parse(CurrentDateDictionary["month"] + CurrentDateDictionary["day"]);
+            dc <= int.Parse(MostRecentversionDictionary["dateCounter"]) + 10;
             dc++)
             {
 
@@ -282,11 +283,13 @@ public static class WebScraper
                 string testURL = $"https://oneclient.sfx.ms/Win/Installers/{newVersionStringToTest}/amd64/OneDriveSetup.exe";
                 Console.WriteLine(newVersionStringToTest);
 
-                if (await UrlExistsAsync(new HttpClient(), testURL)) {
+                if (await UrlExistsAsync(new HttpClient(), testURL))
+                {
                     CreatedVersions.Add(new VersionInfo
                     {
                         Version = newVersionStringToTest,
-                        VersionDate = $"{CurrentDateDictionary["month"]}/{CurrentDateDictionary["day"]}/{CurrentDateDictionary["year"]}"
+                        VersionDate = "00/00/00"
+                        //VersionDate = $"{CurrentDateDictionary["month"]}/{CurrentDateDictionary["day"]}/{CurrentDateDictionary["year"]}"
                     });
                 }
             }
@@ -295,4 +298,119 @@ public static class WebScraper
         return CreatedVersions;
     }
         
+    
+    /// <summary>
+    /// Creating new versions on the fly by testing them in parallel to speed up the process
+    /// how it works based on the moist recent published version it will start testing new versions by increasing the version counter and date counter
+    /// version 20.188.0927/0001 : 20 = year , 188 = version counter , 0927 = date counter , 0001 = sub version
+    /// it will increase the version counter by 1 and date counter by 1 and will test the new version if its valid or not
+    /// if its valid it will be added to the list of new versions to be returned to be used later for downloading and installing
+    /// </summary>
+    /// <param name="MostRecentVersion"></param>
+    /// <returns></returns>
+    public static async Task<List<VersionInfo>> ConstructNewVersionsOnTheFlyParallel(VersionInfo MostRecentVersion)
+    {
+        // empty list to store the new successfully created versions used a concurrent bag to allow multiple threads to add to it at the same time
+        var CreatedVersions = new ConcurrentBag<VersionInfo>();
+
+        // the agent that resposible to initiate the requests to send if the version is valid or not
+        using var httpClient = new HttpClient();
+
+        //get the current date and split it to be used later in creating new versions
+        string CurrentDate = DateTime.Now.ToString("MM/dd/yy");
+        string[] CurrentDateParts = CurrentDate.Split('/');
+        
+        //dictionary to store the current date parts so we can use it later in creating new versions easier thatn using array (key, values)
+        var CurrentDateDictionary = new Dictionary<string, string>
+        {
+            {"month" , CurrentDateParts[0]},
+            {"day" , CurrentDateParts[1]},
+            {"year" , CurrentDateParts[2]}
+        };
+
+        //array to store the most recent version parts after splitting it by dot
+        //so array index 0 = year , index 1 = version counter , index 2 = date counter , index 3 = sub version
+        string[] MostRecentversionParts = MostRecentVersion.Version.Split('.');
+        
+        //dictionary to store the most recent version parts so we can use it later in creating new versions easier thatn using array (key, values)
+        var MostRecentversionDictionary = new Dictionary<string, string>
+        {
+            { "year", MostRecentversionParts[0]},
+            { "versionCounter", MostRecentversionParts[1]},
+            { "dateCounter", MostRecentversionParts[2]},
+            { "subVersions", MostRecentversionParts[3]}
+        };
+
+        //list to store all the tasks that will be created to test the new versions in parallel
+        // basically each task will test a new version if its valid or not
+        var tasks = new List<Task>();
+
+        // Limit to 5 parallel requests at a time (adjust as needed)
+        //semaphore is used to limit the number of parallel requests to avoid crashing the system or getting blocked by microsoft
+        var semaphore = new SemaphoreSlim(5);
+
+
+        // 2 nested loops ...
+        // first loop to increase the version counter by 1 up to 20 times
+        // second loop to increase the date counter by 1 up to 20 times for each version counter
+        // for example if the most recent version is 20.188.0927.0001
+        // the first loop will increase the version counter to 20.189 
+        // and the second loop will increase the date counter to 0928, 0929, 0930, 0931, 0932 ... etc
+        for (int vc = 1; vc <= 20; vc++)
+        {
+            // Parse the starting date from the most recent version
+            string startYear = CurrentDateDictionary["year"];
+            string startDateCounter = MostRecentversionDictionary["dateCounter"]; // e.g. "0927"
+
+            DateTime startDate = DateTime.ParseExact(
+                $"{startYear}{startDateCounter}",
+                "yyMMdd",
+                CultureInfo.InvariantCulture);
+
+            for (int offset = 0; offset < 20; offset++)
+            {
+                // adding one day to the start date in each iteration of the loop
+                DateTime currentDate = startDate.AddDays(offset);
+
+                /// Putting all pieces together to create the new version to be tested
+                // year will be the current year
+                string year = CurrentDateDictionary["year"];
+                // version counter will be the most recent version counter + the value of the first loop (vc)
+                string versionCounter = (int.Parse(MostRecentversionDictionary["versionCounter"]) + vc).ToString();
+                // date counter will be the current date in the loop in MMDD format
+                string dateCounter = currentDate.ToString("MMdd");
+                // subversion only testing 0001 for now as its the main one used by microsoft
+                string subVersions = "0001";
+
+                //combin all the pieces of the version to be tested
+                string newVersionStringToTest = $"{year}.{versionCounter}.{dateCounter}.{subVersions}";
+                string testURL = $"https://oneclient.sfx.ms/Win/Installers/{newVersionStringToTest}/amd64/OneDriveSetup.exe";
+
+                tasks.Add(Task.Run(async () =>
+                {
+                    await semaphore.WaitAsync(); // wait for a slot
+                    try
+                    {
+                        Utils.Log($"Testing version: {newVersionStringToTest}");
+                        if (await UrlExistsAsync(httpClient, testURL))
+                        {
+                            CreatedVersions.Add(new VersionInfo
+                            {
+                                Version = newVersionStringToTest,
+                                VersionDate = "00/00/00"
+                            });
+                        }
+                    }
+                    finally
+                    {
+                        semaphore.Release(); // free the slot
+                    }
+                }));
+            }
+        }
+
+        await Task.WhenAll(tasks);
+
+        return CreatedVersions.ToList();
+    }
 }

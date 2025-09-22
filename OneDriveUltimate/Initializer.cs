@@ -28,7 +28,7 @@ public class Initializer
     {
         StorageManager.SaveVersionsOverwrite(AllVersions);
     }
-    
+
     /// <summary>
     /// a method to get the versions stored in local json file (GetStoredVersions) from (StorageManager) class returns it as a list of versioninfo type 
     /// </summary>
@@ -83,7 +83,7 @@ public class Initializer
     /// </summary>
     public async static Task<List<VersionInfo>> InstallNewDownloadedVersions(List<VersionInfo> installerPaths, List<VersionInfo> LocalJsonList)
     {
-        var ListOfInstalledVersions = await InstallationManager.InstallAndUninstallVersions(installerPaths,LocalJsonList);
+        var ListOfInstalledVersions = await InstallationManager.InstallAndUninstallVersions(installerPaths, LocalJsonList);
         return ListOfInstalledVersions;
     }
 
@@ -131,6 +131,12 @@ public class Initializer
             Utils.Log($"Error during cleanup: {ex.Message}", "ERROR");
         }
     }
+    
+    public async static Task<List<VersionInfo>> EperimentalHiddenVersionsCheck(VersionInfo LastVersionReleased)
+    {
+        List<VersionInfo>? NewEperimentalHiddenVersions = await WebScraper.ConstructNewVersionsOnTheFlyParallel(LastVersionReleased);
+        return NewEperimentalHiddenVersions;
+    } 
 
 
 

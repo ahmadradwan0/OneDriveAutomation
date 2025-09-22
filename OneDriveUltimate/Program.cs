@@ -207,6 +207,61 @@ class Program
 
     }
 
+    /// <summary>
+    /// find hiddenversions by constructing them on the fly
+    /// it uses the same steps as the production workflow but with extra step to construct hidden versions on the fly
+    /// Currently it does not work by it self it can't replace the full production workflow yet but can be added to it
+    /// </summary>
+    /// <returns></returns>
+    public async static Task ExperimentalHiddenVersionsCheck()
+    { 
+        Utils.Log("Starting ExperimentalHiddenVersionsCheck  ...");
+
+        //1st thing is To clean UP the evniroment make sure old files left over 
+        Initializer.Cleanup();
+        Utils.Log("Cleanup is Done");
+
+        //2nd Step is to get all the version we have saved in the local json file and load them in a list
+        var JsonList = Initializer.LocalStorageScrapping();
+        Utils.Log("Number Of versions in Local Json File :::    " + JsonList.Count.ToString());
+
+        //3rd Step is To get all the versions from the website TABLE and load them in a list
+        var websiteList = await Initializer.InitWebScrapping();
+        Utils.Log("Number Of versions From Website Table: " + websiteList.Count.ToString());
+
+        Utils.Log("The Most Recent Version Found From Website Table is : " + websiteList[0].Version);
+
+        //3.5th Step is to Get a List of Hidden Versions by checking subversions of the new versions found from the website table
+        var ExpermentialHiddenVersionsList = await Initializer.EperimentalHiddenVersionsCheck(websiteList[0]);
+        Utils.Log("Number Of Hidden Versions Found: " + ExpermentialHiddenVersionsList.Count.ToString());
+
+        //4th Step is to Get a List of Hidden Versions by checking subversions of the new versions found from list
+        var hiddenVersionsList = await Initializer.HiddenInitWebScrapping(ExpermentialHiddenVersionsList);
+        Utils.Log("Number Of Hidden Versions Found: " + hiddenVersionsList.Count.ToString());
+
+        //5th Step is to Combine the two lists of new versions from website table and hidden versions found by checking subversions (no duplicates)
+        var combinedNewAndHiddenList = Initializer.GetCombinedWebAndHiddenVersions(ExpermentialHiddenVersionsList, hiddenVersionsList);
+        Utils.Log("Total Number Of All Versions From ExpermentialHiddenVersionsList and Hidden Versions Combined : " + combinedNewAndHiddenList.Count.ToString());
+
+        // 6th step is to compare the Combined List Of all discovered versions against the local Json List and get only the new versions;
+        var NewVersionsToBeDownloaded = Initializer.CompareAndGetNewVersions(combinedNewAndHiddenList, JsonList);
+        Utils.Log("Number Of New Versions To Be Downloaded: " + NewVersionsToBeDownloaded.Count.ToString());
+
+        // 7th Step is to Download the new versions found from the previous step and get a list of downloaded file paths
+        var ListOfDownloadedVersions = await Initializer.DownloadAllNewversions(NewVersionsToBeDownloaded);
+        Utils.Log("Number Of New Versions That has Been Successfully Downloaded: " + ListOfDownloadedVersions.Count.ToString());
+
+        // 8tth Step is to Install the new downloaded versions and get a list of installed versions
+        var ListOfInstalledVersions = await Initializer.InstallNewDownloadedVersions(ListOfDownloadedVersions,JsonList);
+        Utils.Log("Number Of New Versions That has Been Successfully Installed: " + ListOfInstalledVersions.Count.ToString());
+
+        // 9th Step is to add the successfully installed versions To oue Local Json File 
+        Initializer.AddNewVersionsToJsonFile(ListOfInstalledVersions, JsonList);
+
+        //10th step is to clean up the environment by deleting all downloaded files
+        Initializer.Cleanup();
+    }
+
     public static async Task Main(string[] args)
     {
 
@@ -221,20 +276,26 @@ class Program
             //await TestCase_FillJsonWithWebSiteAndHiddenVersion();
 
             // # uncomment the line below to test if download manager works (testing only)
-            await TestCase_CheckIfDownloadManagerWorks();
+            //await TestCase_CheckIfDownloadManagerWorks();
 
             // # uncomment the line below to test if Install manager works (testing only)
             //await TestCase_CheckIfInstallManagerWorks();
 
-            // This main line to run the full production workflow
+            // This main line to run the full production workflow (Full Production)
             //await Production2_0();
+
+            //This Line To Try To Construct Versions on The fly (Testing Phase)
+            await ExperimentalHiddenVersionsCheck();
 
             Utils.Log($"=== Task completed successfully at {DateTime.Now} ===");
         }
         catch (Exception ex)
         {
             Utils.Log($"=== Task failed at {DateTime.Now}: {ex.Message} ===", "ERROR");
+            
+            // Send email notification on failure
             await Utils.SendEmailUsingResend(ex.ToString());
+
             Environment.Exit(1); // Exit with error code
         }
 
